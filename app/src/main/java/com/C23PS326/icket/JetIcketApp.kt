@@ -18,26 +18,3 @@ fun JetIcketApp() {
 
 }
 
-@Composable
-fun CategoryBox(
-    modifier: Modifier = Modifier
-){
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(4),
-        contentPadding = PaddingValues(vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-        content = {
-            items(dummyCategory, key = { it.textCategory }) { category ->
-                CategoryItem(category)
-            }
-        }
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun CategoryBoxPreview() {
-    ICKETTheme {
-        CategoryBox()
-    }
-}
