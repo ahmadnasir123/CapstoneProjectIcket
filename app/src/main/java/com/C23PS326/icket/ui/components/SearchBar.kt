@@ -12,8 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.C23PS326.icket.R
+import com.C23PS326.icket.ui.theme.ICKETTheme
 
 @Composable
 fun SearchBar(
@@ -43,4 +45,12 @@ fun SearchBar(
             .heightIn(min = 48.dp)
             .clip(RoundedCornerShape(16.dp))
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun SearchBarPreview(){
+    ICKETTheme(){
+        SearchBar()
+    }
 }
