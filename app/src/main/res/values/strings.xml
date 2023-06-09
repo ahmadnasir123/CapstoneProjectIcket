@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">ICKET</string>
     <string name="placeholder_search">Cari Budaya Indonesia!</string>
-    <string name="txt_header2">Ayoo Jelajahi Indahnya perbedaan kita!</string>
+    <string name="txt_header2">Ayo Jelajahi Indahnya Perbedaan Kita</string>
+    <string name="description_banner">Terdapat 11.622 warisan budaya yang dicatatkan dan 1.728 di antaranya telah ditetapkan</string>
+    <string name="section_populer_budaya">Budaya Populer</string>
+    <string name="see_all_budaya">see all</string>
+    <string name="see_all_wisata">see all</string>
+    <string name="section_populer_wisata">Wisata Populer</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_provinsi">Provinsi</string>
+    <string name="menu_about">About</string>
 </resources>
