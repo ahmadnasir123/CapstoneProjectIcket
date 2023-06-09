@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.C23PS326.icket.navigation.NavigationGraph
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,6 +16,7 @@ class MainActivity : ComponentActivity() {
                     ICKETTheme{
                         JetIcketApp()
                  }
+                NavigationGraph()
         }
     }
 }

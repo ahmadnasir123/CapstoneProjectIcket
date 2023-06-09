@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "936129222175",
+    "project_id": "capstone-icket-387805",
+    "storage_bucket": "capstone-icket-387805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936129222175:android:ba026ddfadad21bf00a72a",
+        "android_client_info": {
+          "package_name": "com.C23PS326.icket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhTTlxin3NXya6ViIJXuWOuy9sIOnpPh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
