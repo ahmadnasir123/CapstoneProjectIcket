@@ -17,5 +17,6 @@
     <string name = "txt_rumah_adat">Rumah Adat</string>
     <string name = "txt_pakaian">Pakaian</string>
     <string name = "txt_tradisi">Tradisi</string>
+    <string name = "text_test">Test</string>
 
 </resources>
