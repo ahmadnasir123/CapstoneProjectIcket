@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ICKET</string>
+    <string name="placeholder_search">Cari Budaya Indonesia!</string>
 </resources>
