@@ -70,7 +70,8 @@ fun BudayaItemPreview() {
                 "https://asset.kompas.com/crops/LeDT4hIHS0zJ5Bq7Yu6dhLp_ysM=/16x0:691x450/750x500/data/photo/2022/09/09/631af8ce3c329.jpg"
             ),
 
-                    modifier = Modifier.padding(8.dp)
+            modifier = Modifier.padding(8.dp)
+
         )
     }
 }
