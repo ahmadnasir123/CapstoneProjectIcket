@@ -87,6 +87,7 @@ fun DetailContent(
                 )
             }
         }
+        CategoryBox()
     }
 }
 
