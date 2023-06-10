@@ -1,20 +1,32 @@
 package com.C23PS326.icket
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.C23PS326.icket.model.dummyCategory
-import com.C23PS326.icket.ui.components.CategoryItem
-import com.C23PS326.icket.ui.theme.ICKETTheme
+import com.C23PS326.icket.ui.components.SearchBar
+import androidx.compose.foundation.Image
 
 @Composable
 fun JetIcketApp() {
 
+}
+
+@Composable
+fun Banner(
+    modifier: Modifier = Modifier,
+) {
+    Box(modifier = modifier) {
+        Image(
+            painter = painterResource(R.drawable.banner),
+            contentDescription = "Banner Image",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.height(160.dp)
+        )
+        SearchBar()
+    }
 }
 
