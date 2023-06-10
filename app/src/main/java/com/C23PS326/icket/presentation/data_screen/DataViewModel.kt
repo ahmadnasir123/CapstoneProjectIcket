@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.C23PS326.icket.screen.Provinsi
+import com.C23PS326.icket.ui.screen.Provinsi
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import kotlinx.coroutines.launch
@@ -23,7 +23,7 @@ class DataViewModel: ViewModel(){
         }
     }
 }
-suspend fun getDataFromFireStore():Provinsi{
+suspend fun getDataFromFireStore(): Provinsi {
     val db = FirebaseFirestore.getInstance()
     var bali = Provinsi()
 

@@ -14,6 +14,11 @@ import com.C23PS326.icket.ui.components.CategoryItem
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 @Composable
+fun DetailProvinsiScreen(){
+
+}
+
+@Composable
 fun CategoryBox(
     modifier: Modifier = Modifier
 ){
