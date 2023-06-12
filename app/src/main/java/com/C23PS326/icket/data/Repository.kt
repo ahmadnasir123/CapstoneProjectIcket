@@ -1,14 +1,10 @@
 package com.C23PS326.icket.data
 
 import com.C23PS326.icket.model.OrderRekomendasi
-<<<<<<< HEAD
 import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
 import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
-=======
-import com.C23PS326.icket.model.RekomendasiData
 import com.C23PS326.icket.model.team.OrderTeam
 import com.C23PS326.icket.model.team.TeamData
->>>>>>> origin/master
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 

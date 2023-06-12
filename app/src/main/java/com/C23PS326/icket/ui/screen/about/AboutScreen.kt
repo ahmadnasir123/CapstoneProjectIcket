@@ -21,7 +21,7 @@ import com.C23PS326.icket.ui.theme.ICKETTheme
 fun AboutScreen(
     modifier: Modifier = Modifier.fillMaxSize(),
 ) {
-
+    Text(text = "Hello")
 }
 
 @Composable
@@ -32,7 +32,7 @@ fun Team(name: String, email: String, path: String) {
     ) {
         Image(
             painter = painterResource(R.drawable.placeholder),
-            contentDescription = "Logo Jetpack Compose",
+            contentDescription = "foto",
             modifier = Modifier
                 .size(80.dp)
                 .clip(RoundedCornerShape(18.dp))
