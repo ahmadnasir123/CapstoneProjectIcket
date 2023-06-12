@@ -14,28 +14,51 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import com.C23PS326.icket.JetIcketApp
 import com.C23PS326.icket.model.dummyCategory
 import com.C23PS326.icket.ui.components.CategoryItem
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.R
+import com.C23PS326.icket.data.Repository
 import com.C23PS326.icket.model.Rekomendasi
+import com.C23PS326.icket.ui.ViewModelFactory
+import com.C23PS326.icket.ui.common.UiState
+import com.C23PS326.icket.ui.screen.detail.DetailViewModel
 
 @Composable
-fun DetailProvinsiScreen(){
+fun DetailProvinsiScreen(
+    provinsiId: Long,
+    viewModel: DetailViewModel = viewModel(factory = ViewModelFactory(Repository())),
+    navigateBack: () -> Unit,
 
+    ){
+    viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
+        when (uiState) {
+            is UiState.Loading -> {
+                viewModel.getWisataId(provinsiId)
+            }
+            is UiState.Success -> {
+                val data = uiState.data
+                DetailContent(
+                    data.rekomendasi,
+                    onBackClick = navigateBack,
+                )
+            }
+            is UiState.Error -> {}
+        }
+    }
 }
 
 @Composable

@@ -17,7 +17,7 @@ fun NavigationGraph(
         startDestination = Screens.SignInScreen.route
     ){
         composable(route = Screens.SignInScreen.route) {
-            DataScreen()
+
         }
     }
 }

@@ -25,11 +25,8 @@ fun DataScreen(
         verticalArrangement = Arrangement.Center
     ) {
         Text(text = getData.description)
-
-
     }
 }
-
 @Preview(showBackground = true)
 @Composable
 fun JetPlayerPreview() {

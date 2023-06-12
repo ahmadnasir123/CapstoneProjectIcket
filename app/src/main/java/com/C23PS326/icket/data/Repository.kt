@@ -1,7 +1,8 @@
 package com.C23PS326.icket.data
 
 import com.C23PS326.icket.model.OrderRekomendasi
-import com.C23PS326.icket.model.RekomendasiData
+import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
+import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
@@ -10,9 +11,23 @@ class Repository {
 
     init {
         if (rekomen.isEmpty()) {
-            RekomendasiData.rekomendata.forEach{
+            RekomendasiDataBudaya.rekomendata.forEach{
                 rekomen.add(OrderRekomendasi(it,0))
             }
+        }
+        if (rekomen.isEmpty()) {
+            RekomendasiDataWisata.wisatadata.forEach{
+                rekomen.add(OrderRekomendasi(it,0))
+            }
+        }
+    }
+
+    fun getAllRewards(): Flow<List<OrderRekomendasi>> {
+        return flowOf(rekomen)
+    }
+    fun getOrderRewardById(rewardId: Long): OrderRekomendasi {
+        return rekomen.first {
+            it.rekomendasi.rekomenId == rewardId
         }
     }
     fun getRekomendasi(): Flow<MutableList<OrderRekomendasi>> {
@@ -24,6 +39,18 @@ class Repository {
         return rekomen.first() {
             it.rekomendasi.rekomenId == wisataId
         }
+    }
+    fun getInstance(): Repository =
+        instance ?: synchronized(this) {
+            Repository().apply {
+                instance = this
+            }
+        }
+    companion object {
+        @Volatile
+        private var instance: Repository? = null
+
+
     }
 
 }
