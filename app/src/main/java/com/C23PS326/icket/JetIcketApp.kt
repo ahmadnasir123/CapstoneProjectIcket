@@ -12,7 +12,6 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.ui.tooling.preview.Preview
 import com.C23PS326.icket.model.dummyCategory
-import com.C23PS326.icket.screen.CategoryBox
 import com.C23PS326.icket.ui.components.CategoryItem
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
