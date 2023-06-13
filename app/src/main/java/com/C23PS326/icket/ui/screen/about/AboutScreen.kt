@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.C23PS326.icket.model.team.TeamData
-import com.C23PS326.icket.ui.screen.home.CategoryRow
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.R
 
