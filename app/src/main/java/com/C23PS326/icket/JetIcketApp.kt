@@ -1,5 +1,6 @@
 package com.C23PS326.icket
 
+import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.*
@@ -11,6 +12,7 @@ import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -28,6 +30,8 @@ import com.C23PS326.icket.ui.screen.Provinsi
 import com.C23PS326.icket.ui.screen.about.ScreenAbout
 import com.C23PS326.icket.ui.screen.home.HomeScreen
 import com.C23PS326.icket.ui.theme.ICKETTheme
+import com.C23PS326.icket.ui.theme.lightblue
+import com.C23PS326.icket.ui.theme.redColor
 
 
 @Composable
@@ -106,7 +110,7 @@ private fun BottomBar(
     modifier: Modifier = Modifier
 ) {
     BottomNavigation(
-        modifier = modifier
+        modifier = modifier,
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
@@ -127,7 +131,9 @@ private fun BottomBar(
                 screen = Screen.About
             ),
         )
-        BottomNavigation {
+        BottomNavigation(
+            backgroundColor = MaterialTheme.colors.lightblue
+        ) {
             navigationItems.map { item ->
                 BottomNavigationItem(
                     icon = {
