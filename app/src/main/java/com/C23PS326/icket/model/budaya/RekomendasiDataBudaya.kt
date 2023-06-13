@@ -6,7 +6,7 @@ object RekomendasiDataBudaya {
     val rekomendata = listOf(
         Rekomendasi(
             1,
-            "Danau Toba",
+            "Wayang Kulit ",
             "Danau Toba di Sumatera Utara merupakan salah satu destinasi super prioritas yang ditetapkan Kementerian Pariwisata dan Ekonomi Kreatif (Kemenparekraf). Danau Toba ini diperkirakan terbentuk dari letusan dahsyat gunung api, Gunung Toba, yang terjadi 74 ribu tahun lalu. \n" +
                     "\"Danau Toba juga dikelilingi oleh perbukitan dan tanaman hijau subur. Jangan lupa, ketika Anda mengunjungi danau ini, pastikan Anda mendatangi Pulau Samosir yang merupakan pulau menawan di tengah danau. Kemudian di desa-desa terdekat, Anda juga dapat menjelajahi budaya Batak yang mempesona.\n",
         "https://seringjalan.com/wp-content/uploads/2020/02/infosmi.jpg"

@@ -13,24 +13,24 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
-@Composable
-fun DataScreen(
-    dataViewModel: DataViewModel = viewModel()
-){
-    val getData = dataViewModel.state.value
-
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(text = getData.description)
-    }
-}
-@Preview(showBackground = true)
-@Composable
-fun JetPlayerPreview() {
-    ICKETTheme {
-        DataScreen()
-    }
-}
+//@Composable
+//fun DataScreen(
+//    dataViewModel: DataViewModel = viewModel()
+//){
+//    val getData = dataViewModel.state.value
+//
+//    Column(
+//        modifier = Modifier.fillMaxSize(),
+//        horizontalAlignment = Alignment.CenterHorizontally,
+//        verticalArrangement = Arrangement.Center
+//    ) {
+//        Text(text = getData.description)
+//    }
+//}
+//@Preview(showBackground = true)
+//@Composable
+//fun JetPlayerPreview() {
+//    ICKETTheme {
+//        DataScreen()
+//    }
+//}

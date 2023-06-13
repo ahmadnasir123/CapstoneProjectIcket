@@ -1,4 +1,4 @@
-package com.C23PS326.icket.ui.screen.detail
+package com.C23PS326.icket.ui.screen.provinsi.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -24,7 +24,7 @@ class DetailViewModel(
         }
     }
 
-    fun getWisataId(wisataId: Long) {
+    fun getProvinsiId(wisataId: Long) {
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             _uiState.value = UiState.Success(repository.getOrderById(wisataId))
