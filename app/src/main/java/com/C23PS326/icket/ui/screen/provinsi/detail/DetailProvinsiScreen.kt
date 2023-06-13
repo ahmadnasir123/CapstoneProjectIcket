@@ -24,14 +24,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import com.C23PS326.icket.model.dummyCategory
-import com.C23PS326.icket.ui.components.CategoryItem
 import com.C23PS326.icket.R
 import com.C23PS326.icket.data.Repository
 import com.C23PS326.icket.model.Rekomendasi
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
-import com.C23PS326.icket.ui.screen.detail.DetailViewModel
+import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.theme.*
 
 @Composable
@@ -44,7 +42,7 @@ fun DetailProvinsiScreen(
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
-                viewModel.getWisataId(provinsiId)
+                viewModel.getProvinsiId(provinsiId)
             }
             is UiState.Success -> {
                 val data = uiState.data

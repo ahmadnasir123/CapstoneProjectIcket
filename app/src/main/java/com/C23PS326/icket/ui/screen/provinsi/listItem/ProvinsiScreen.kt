@@ -26,7 +26,7 @@ import coil.compose.AsyncImage
 import com.C23PS326.icket.model.Rekomendasi
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
-import com.C23PS326.icket.ui.screen.detail.DetailViewModel
+import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.R
 import com.C23PS326.icket.di.Injection
@@ -45,7 +45,7 @@ fun ProvinsiScreen(
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
-                viewModel.getWisataId(wisataId)
+                viewModel.getProvinsiId(wisataId)
             }
             is UiState.Success -> {
                 val data = uiState.data

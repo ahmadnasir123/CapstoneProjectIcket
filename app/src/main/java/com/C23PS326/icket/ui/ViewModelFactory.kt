@@ -3,7 +3,7 @@ package com.C23PS326.icket.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.C23PS326.icket.data.Repository
-import com.C23PS326.icket.ui.screen.detail.DetailViewModel
+import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.screen.home.HomeViewModel
 
 class ViewModelFactory(private val repository: Repository) :
