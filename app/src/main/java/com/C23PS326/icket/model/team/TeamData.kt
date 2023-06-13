@@ -6,7 +6,7 @@ object TeamData {
         Team(
             1,
             "Ahmad Nasir",
-            "nasir.ahmad@gmail.com",
+            "nasirahmad240502@gmail.com",
             "Mobile Development",
             "https://cdn-icons-png.flaticon.com/512/74/74472.png"
         ),
@@ -19,28 +19,28 @@ object TeamData {
         ),
         Team(
             3,
-            "Rasya",
-            "rasya@gmail.com",
+            "Rasya Shafad Utsula",
+            "rasyashafad253@gmail.com",
             "Cloud Computing",
             "https://cdn-icons-png.flaticon.com/512/74/74472.png"
         ),
         Team(
             4,
-            "Bagas",
-            "bagas@gmail.com",
+            "RM Bagaskara Aryo Distyo Saputro",
+            "rmbagaskarads@gmail.com",
             "Cloud Computing",
             "https://cdn-icons-png.flaticon.com/512/74/74472.png"
         ),
         Team(
             5,
-            "Zidni",
-            "zidni@gmail.com",
+            "Rahma Zidny Taqiya",
+            "zidnytaqiya@gmail.com",
             "Machine Learning",
             "https://cdn-icons-png.flaticon.com/512/74/74472.png"
         ),
         Team(
             6,
-            "Nathan",
+            "Annisa Nathania Eka Gustha",
             "nathan@gmail.com",
             "Machine Learning",
             "https://cdn-icons-png.flaticon.com/512/74/74472.png"
