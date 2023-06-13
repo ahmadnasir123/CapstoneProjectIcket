@@ -25,9 +25,8 @@ import com.C23PS326.icket.screen.DetailProvinsiScreen
 import com.C23PS326.icket.ui.navigation.NavigationItem
 import com.C23PS326.icket.ui.navigation.Screen
 import com.C23PS326.icket.ui.screen.Provinsi
-import com.C23PS326.icket.ui.screen.about.AboutScreen
+import com.C23PS326.icket.ui.screen.about.ScreenAbout
 import com.C23PS326.icket.ui.screen.home.HomeScreen
-import com.C23PS326.icket.ui.screen.provinsi.ProvinsiScreen
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 
@@ -76,7 +75,7 @@ fun JetIcketApp(
                 )
             }
             composable(Screen.About.route) {
-                AboutScreen()
+                ScreenAbout()
             }
             composable(Screen.Provinsi.route) {
                 Provinsi()
