@@ -16,6 +16,7 @@ val Pink = Color(0xFFF62A98)
 val Green = Color(0xFF00C22B)
 val Purple = Color(0xFFCC60FF)
 val Darkpurple = Color(0xFFD715AC)
+val LightBlue = Color(0xFF0657BD)
 
 val Colors.redColor
 get() = if (isLight) Red else Color.Red
@@ -37,3 +38,6 @@ get() = if(isLight) Purple else Color.LightGray
 
 val Colors.darkpurpleColor
 get() = if(isLight) Darkpurple else Color.White
+
+val Colors.lightblue
+get() = if(isLight) LightBlue else Color.White
