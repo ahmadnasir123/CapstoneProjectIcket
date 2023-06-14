@@ -83,7 +83,11 @@ fun JetIcketApp(
                 ScreenAbout()
             }
             composable(Screen.Provinsi.route) {
-                Provinsi()
+                Provinsi(
+                    navigateToDetail = {provinsiId ->
+                        navController.navigate(Screen.DetailProvinsi.createRoute(provinsiId))
+                    }
+                )
             }
 
 
@@ -94,6 +98,19 @@ fun JetIcketApp(
                 val id = it.arguments?.getLong("rewardId") ?: -1L
                 BudayaScreen(
                     wisataId = id,
+                    navigateBack = {
+                        navController.navigateUp()
+                    },
+                )
+            }
+
+            composable(
+                route = Screen.DetailProvinsi.route,
+                arguments = listOf(navArgument("provinsiId") { type = NavType.LongType }),
+            ) {
+                val id = it.arguments?.getLong("provinsiId") ?: -1L
+                DetailProvinsiScreen(
+                    provinsiId = id,
                     navigateBack = {
                         navController.navigateUp()
                     },

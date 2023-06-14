@@ -9,9 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class DetailViewModel(
-    private val repository: Repository
-) : ViewModel() {
+class DetailViewModel(private val repository: Repository) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<OrderRekomendasi>> =
         MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<OrderRekomendasi>>

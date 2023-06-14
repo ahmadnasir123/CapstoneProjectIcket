@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.C23PS326.icket.data.Repository
 import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.screen.home.HomeViewModel
+import com.C23PS326.icket.ui.screen.provinsi.ProvinsiViewModel
 
 class ViewModelFactory(private val repository: Repository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -13,6 +14,14 @@ class ViewModelFactory(private val repository: Repository) :
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
             return HomeViewModel(repository) as T
+        } else if (modelClass.isAssignableFrom(DetailViewModel::class.java)) {
+            return DetailViewModel(repository) as T
+        } else if (modelClass.isAssignableFrom(DetailViewModel::class.java)) {
+            return DetailViewModel(repository) as T
+        }
+
+        if (modelClass.isAssignableFrom(ProvinsiViewModel::class.java)) {
+            return ProvinsiViewModel(repository) as T
         } else if (modelClass.isAssignableFrom(DetailViewModel::class.java)) {
             return DetailViewModel(repository) as T
         } else if (modelClass.isAssignableFrom(DetailViewModel::class.java)) {

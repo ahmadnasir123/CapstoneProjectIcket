@@ -5,4 +5,5 @@ data class Provinsi(
     val name: String,
     val ibukota: String,
     val desc: String,
+    val photo: String,
 )
