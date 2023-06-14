@@ -39,7 +39,6 @@ fun BudayaScreen(
         factory = ViewModelFactory(
                 Injection.provideRepository()
         )
-
     ),
     navigateBack: () -> Unit,
 
@@ -124,7 +123,7 @@ fun DetailContent(
 
 @Preview(showBackground = true)
 @Composable
-fun DetailProvinsiPreview() {
+fun DetailBudayaPreview() {
     ICKETTheme {
         DetailContent(
             data = Budaya(

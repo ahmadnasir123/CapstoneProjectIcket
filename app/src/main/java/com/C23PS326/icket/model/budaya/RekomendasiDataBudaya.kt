@@ -7,74 +7,75 @@ object RekomendasiDataBudaya {
         Budaya(
             1,
             "Wayang Kulit ",
-            "Danau Toba di Sumatera Utara merupakan salah satu destinasi super prioritas yang ditetapkan Kementerian Pariwisata dan Ekonomi Kreatif (Kemenparekraf). Danau Toba ini diperkirakan terbentuk dari letusan dahsyat gunung api, Gunung Toba, yang terjadi 74 ribu tahun lalu. \n" +
-                    "\"Danau Toba juga dikelilingi oleh perbukitan dan tanaman hijau subur. Jangan lupa, ketika Anda mengunjungi danau ini, pastikan Anda mendatangi Pulau Samosir yang merupakan pulau menawan di tengah danau. Kemudian di desa-desa terdekat, Anda juga dapat menjelajahi budaya Batak yang mempesona.\n",
-        "https://seringjalan.com/wp-content/uploads/2020/02/infosmi.jpg"
+            "\n" +
+                    "Wayang kulit adalah sebuah seni pertunjukan tradisional Indonesia yang memiliki sejarah panjang dan kaya. Seni wayang kulit diperkirakan telah ada sejak sekitar abad ke-10 Masehi dan terus berkembang hingga saat ini. " +
+                    "\n" +"Pertunjukan wayang kulit melibatkan dalang yang mengendalikan boneka-boneka kulit yang diproyeksikan melalui layar putih. Wayang kulit memiliki akar budaya yang kuat dan dipengaruhi oleh berbagai tradisi, seperti Hindu, Budha, dan Islam. Kisah-kisah yang diceritakan dalam wayang kulit sering kali diambil dari epik-epik seperti Ramayana dan Mahabharata, serta cerita-cerita rakyat Indonesia. Selain sebagai hiburan, pertunjukan wayang kulit juga memiliki makna religius dan pendidikan, dengan nilai-nilai moral yang disampaikan melalui dialog dan adegan-a degan dalam pertunjukan. Wayang kulit menjadi bagian penting dalam mempertahankan dan melestarikan warisan budaya dan sejarah Indonesia, serta sebagai sarana ekspresi seni yang unik dan memukau.",
+            "https://pelayananpublik.id/wp-content/uploads/2020/04/Screenshot_20200416-175344_1.jpg"
             ),
         Budaya(
             2,
-            "Raja Ampat",
-            "Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di barat bagian Semenanjung Kepala Burung (Vogelkoop) Pulau Papua. Secara administrasi, gugusan ini berada di bawah Kabupaten Raja Ampat dan Kota Sorong, Provinsi Papua Barat Daya. Kepulauan ini sekarang menjadi tujuan para penyelam yang tertarik akan keindahan pemandangan bawah lautnya. Empat gugusan pulau yang menjadi anggotanya dinamakan menurut empat pulau terbesarnya, yaitu Pulau Waigeo, Pulau Misool, Pulau Salawati, dan Pulau Batanta.",
-            "https://www.wisataidn.com/wp-content/uploads/2021/10/Tempat-Wisata-di-Raja-Ampat.jpeg"
-
+            "Angklung",
+            "Angklung adalah alat musik tradisional Indonesia yang terkenal dengan suara yang indah dan khas. Angklung terdiri dari serangkaian tabung bambu yang diatur berdasarkan ukuran dan nada, dan setiap tabung memiliki tangkai pendek yang dilekatkan sehingga dapat menghasilkan suara ketika digoyangkan. Sejarah angklung dapat ditelusuri hingga zaman kuno di Jawa Barat, Indonesia. Alat musik ini diyakini berasal dari ritual pertanian, di mana bunyi angklung digunakan untuk memanggil dewa-dewa dan mengusir roh jahat. " +
+                    "\n"+"Seiring berjalannya waktu, angklung menjadi semakin populer sebagai alat musik dalam berbagai acara budaya, upacara, dan pertunjukan. Pada tahun 2010, angklung diakui sebagai Warisan Kemanusiaan Nonbendawi oleh UNESCO, yang membuktikan pentingnya alat musik ini dalam menjaga keanekaragaman budaya dan sebagai simbol identitas Indonesia yang unik.",
+        "https://indonesiakaya.com/wp-content/uploads/2020/10/3__IMG_5450_Angklung_gubrag_terbuat_dari_bambu_hitam_yang_dihias_kembang_wiru_di_bagian_atasnya.jpg"
         ),
         Budaya(
             3,
-            "Pulau Komodo",
-            "Keindahan Pulau Komodo tampaknya memang dapat memikat siapa saja, tak terkecuali Gwyneth Paltrow, pemeran Pepper Potts di film Iron Man, hingga pembalap MotoGP Valentino Rossi. \n"+
-                    "Salah satu yang menarik dari liburan Gwyneth Paltrow di Pulau Komodo adalah menjajal serunya living on board, alias tinggal di atas kapal pinisi di tengah biru dan jernihnya perairan di sekitar Pulau Komodo.",
-            "https://asset.kompas.com/crops/PszTpgbz949Ix6DouywSbAiu0sQ=/0x0:780x520/780x390/data/photo/2019/09/26/5d8c64544d656.jpg"
-
+            "Batik",
+            "Batik adalah seni kain tradisional Indonesia yang unik dan menakjubkan. Batik melibatkan teknik pewarnaan kain dengan motif yang rumit, yang dihasilkan dengan menggunakan lilin yang diterapkan pada kain sebelum proses pewarnaan dilakukan. Sejarah batik Indonesia dapat ditelusuri kembali hingga zaman prasejarah, tetapi perkembangannya yang paling signifikan terjadi selama berabad-abad di pulau Jawa. Batik pada awalnya merupakan simbol status sosial dan keagungan, digunakan oleh keluarga kerajaan dan bangsawan. Namun, seiring dengan berjalannya waktu, batik menjadi populer di kalangan masyarakat umum. " +
+                    "\n"+"Batik tidak hanya merupakan karya seni yang indah, tetapi juga menceritakan nilai-nilai budaya, tradisi, dan sejarah Indonesia melalui pola-pola dan motif yang khas. Pada tahun 2009, batik Indonesia diakui sebagai Warisan Kemanusiaan oleh UNESCO, mengakui pentingnya batik dalam mempertahankan keanekaragaman budaya dan menjadi kebanggaan nasional Indonesia.",
+            "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2020/10/motif-batik-di-indonesia-7.jpg"
         ),
         Budaya(
             4,
-            "Pulau Moyo",
-            "Pulau Moyo sangat memesona dengan keindahan alam yang sangat eksklusif. Pulau ini memiliki beberapa destinasi wisata unggulan antara lain: Air Terjun Mata Jitu, Air Terjun Senggalo, Pantai Tanjung Pasir, dan masih banyak lagi.\n" +
-                    "\n" +
-                    "Menariknya, Air Terjun Mata Jitu di Pulau Moyo terkenal dengan julukan “Queen Waterfall”. Penyebutan ini muncul karena Lady Diana pernah mengunjungi destinasi wisata tersebut. Air terjun ini menjadi istimewa karena memiliki banyak stalaktit dan stalagmit yang menghiasi permukaan air terjunnya.",
-            "https://www.senangrekreasi.com/wp-content/uploads/2021/07/Pulau-moyo.jpg"
-
+            "Gamelan",
+            "Gamelan adalah ansambel musik tradisional Indonesia yang memukau dengan kombinasi instrumen perkusi dan logam yang menghasilkan suara yang kaya dan kompleks. Sejarah gamelan dapat ditelusuri hingga lebih dari seribu tahun yang lalu, di mana instrumen ini telah menjadi bagian tak terpisahkan dari budaya dan kehidupan masyarakat Indonesia. Gamelan ditemukan di berbagai daerah di Indonesia, dengan perbedaan gaya, teknik, dan jenis instrumen yang digunakan. Gamelan tidak hanya digunakan sebagai hiburan, tetapi juga dalam acara keagamaan, upacara adat, dan pertunjukan seni. " +
+                    "\n"+"Peran gamelan dalam kehidupan masyarakat Indonesia sangat penting, karena musik ini tidak hanya menghibur tetapi juga mencerminkan identitas, nilai, dan kearifan budaya Indonesia. Dengan keunikan dan keindahannya, gamelan terus menjadi bagian yang tak tergantikan dalam memperkaya warisan musik tradisional Indonesia.",
+                        "https://upload.wikimedia.org/wikipedia/commons/2/26/Traditional_indonesian_instruments02.jpg"
         ),
         Budaya(
             5,
-            "labuan Bajo",
-            "Labuan Bajo merupakan sebuah surga tersembunyi yang ada di Indonesia bagian timur. Desa ini terletak di Kecamatan Komodo, Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Timur yang berbatasan langsung dengan Nusa Tenggara Barat dan dipisahkan oleh Selat Sape. Labuan Bajo adalah salah satu dari lima Destinasi Super Prioritas yang sedang dikembangkan di Indonesia. ",
-            "https://res.klook.com/image/upload/Mobile/City/rv76yqukp2hey0fckh99.jpg"
+            "Tari Saman",
+            "Tari Saman adalah sebuah tarian tradisional yang berasal dari Aceh, Indonesia. Tarian ini memiliki ciri khas gerakan yang dinamis, energik, dan serentak antara para penari. Sejarah Tari Saman berawal dari zaman Kesultanan Aceh pada abad ke-17. Tarian ini awalnya digunakan sebagai media dakwah Islam, di mana gerakan-gerakan yang terkoordinasi menggambarkan kekompakan dan persatuan umat dalam menyebarkan ajaran agama. Tari Saman juga menjadi simbol perlawanan dan semangat kebersamaan dalam melawan penjajah. Tarian ini menggunakan gerakan tangan, kepala, dan tubuh dengan diiringi oleh nyanyian dan musik yang dimainkan dengan alat musik tradisional seperti gendang, rebana, dan seruling. " +
+                    "\n"+"Tari Saman telah menjadi bagian yang tak terpisahkan dari budaya Aceh dan diakui oleh UNESCO sebagai Warisan Budaya Takbenda Manusia pada tahun 2011, karena nilai-nilai budaya, kesenian, dan spiritualitas yang diwakilinya serta peran pentingnya dalam memperkuat identitas dan persatuan masyarakat Aceh.",
+            "https://asset.kompas.com/crops/1o77M9B0xH2LhDbX8KL-v191uGk=/0x0:780x520/750x500/data/photo/2021/06/29/60dacbf4238f5.jpg"
         ),
         Budaya(
             6,
-            "Candi Borobudur",
-            "Candi Borobudur, Pawon dan Mendut merupakan candi budha yang dibangun oleh raja Samaratungga dari dinasti Syailendra pada abad ke 8. Tiga Candi Budha tersebut memiliki relief atau gambar timbul yang menarik menggambarkan kehidupan sang Budha dan reinkarnasinya dalam bentuk ceritera Jataka dan Lalitavistara. Candi Borobudur dan Pawon terletak di Kecamatan Borobudur sedangkan candi Mendut di Kecamatan Mungkid, 3 km kearah timur candi Borobudur.",
-            "https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2022/08/29102732/image001-13-810x540.png"
-
+            "Pencak Silat",
+            "\n" +
+                    "Pencak Silat adalah seni bela diri tradisional Indonesia yang mencakup beragam teknik bertarung dan gerakan. Sejarah Pencak Silat dapat ditelusuri hingga zaman kerajaan di Nusantara, di mana seni bela diri ini digunakan sebagai bentuk pertahanan diri dan kepercayaan spiritual. Pencak Silat telah berkembang dari generasi ke generasi, dipelajari dan diwariskan melalui sistem guru-murid. Setiap daerah di Indonesia memiliki variasi dan gaya unik dalam Pencak Silat mereka, dengan berbagai nama dan karakteristik khas. Seni bela diri ini melibatkan teknik pukulan, tendangan, lemparan, kuncian, dan gerakan akrobatik. " +
+                    "\n"+"Selain sebagai bentuk keahlian bertarung, Pencak Silat juga mengajarkan etika, disiplin, kekuatan mental, dan nilai-nilai moral. Pencak Silat merupakan warisan budaya yang penting bagi Indonesia, diakui oleh UNESCO sebagai Warisan Budaya Takbenda Manusia pada tahun 2019, yang menegaskan perannya dalam memperkuat identitas bangsa dan mewujudkan semangat persatuan.",
+                    "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/09/01092546/Pertolongan-Pertama-Cedera-saat-Pencak-Silat.jpg"
         ),
         Budaya(
             7,
-            "Gunung Bromo",
-            "Gunung Bromo atau dalam bahasa Tengger dieja \"Brama\", juga disebut Kaldera Tengger, adalah sebuah gunung berapi aktif di Jawa Timur, Indonesia. Gunung ini memiliki ketinggian 2.329 meter di atas permukaan laut dan berada dalam empat wilayah kabupaten, yakni Kabupaten Probolinggo, Kabupaten Pasuruan, Kabupaten Lumajang, dan Kabupaten Malang. Gunung Bromo terkenal sebagai objek wisata utama di Jawa Timur. Sebagai sebuah objek wisata, Bromo menjadi menarik karena statusnya sebagai gunung berapi yang masih aktif. Gunung Bromo termasuk dalam kawasan Taman Nasional Bromo Tengger Semeru.",
-            "https://awsimages.detik.net.id/community/media/visual/2020/09/20/gunung-bromo_169.jpeg?w=1200"
-
+            "Reog Ponorogo",
+            "Reog Ponorogo adalah sebuah seni pertunjukan tradisional yang berasal dari Ponorogo, Jawa Timur, Indonesia. Pertunjukan ini melibatkan sekelompok penari yang mengenakan topeng hewan raksasa, seperti singa atau macan tutul, dengan hiasan kepala yang menggambarkan kuda berkepala singa. Sejarah Reog Ponorogo berkaitan erat dengan legenda dari masa pemerintahan Raja Brawijaya dari Kerajaan Majapahit pada abad ke-15. Konon, Raja Brawijaya pergi berburu untuk mencari seekor singa sebagai hadiah pernikahan putrinya. Namun, Raja Brawijaya tidak berhasil menemukan seekor singa, sehingga ia memerintahkan seseorang untuk membuat topeng singa yang besar dan dihiasi dengan bulu peafowl. " +
+                    "\n"+"Reog kemudian menjadi pertunjukan yang populer dan berkembang dalam masyarakat Ponorogo. Pertunjukan Reog Ponorogo melibatkan gerakan yang dinamis, akrobatik, dan atraktif, diiringi oleh musik gamelan yang menggetarkan. Reog Ponorogo tidak hanya menjadi hiburan yang mengagumkan, tetapi juga mewakili kekuatan, keberanian, dan spiritualitas dalam budaya Jawa Timur.",
+           "https://arekmemo.com/wp-content/uploads/2022/02/reog-crop.jpg"
         ),
         Budaya(
             8,
-            "Bintan",
-            "Pulau Bintan adalah pulau di provinsi Kepulauan Riau, di mana terdapat Kota Tanjungpinang, Ibu kota Provinsi Kepulauan Riau. Di Pulau ini memiliki tiga Pemerintahan, Pemerintah Kota Tanjungpinang yang terletak di Senggarang, Pemerintah Kabupaten Bintan terletak di Bandar Seri Bintan, serta Pemerintahan Provinsi Kepulauan Riau di Pulau Dompak (Tanjungpinang). Pulau ini berdekatan dengan negara Singapura.",
-            "https://ik.imagekit.io/tvlk/blog/2020/03/wisata-bintan-8-Bintan-Resort.jpg"
-
+            "Ondel Ondel",
+            "\n" +
+                    "Ondel-ondel adalah boneka raksasa yang menjadi simbol khas Jakarta, Indonesia. Boneka ini terbuat dari anyaman bambu dengan ukuran yang tinggi dan besar, dihiasi dengan kain warna-warni dan atribut yang mencolok. Sejarah Ondel-ondel berkaitan dengan kepercayaan dan tradisi masyarakat Betawi, suku asli Jakarta. Ondel-ondel awalnya digunakan sebagai upaya untuk mengusir roh jahat dan melindungi masyarakat dari bencana atau kesialan. Pertunjukan Ondel-ondel biasanya dilakukan dalam acara-acara perayaan, festival, atau acara adat. " +
+                    "\n"+"Penari yang mengendalikan Ondel-ondel berjalan dan menari dengan menggerak-gerakkan boneka tersebut. Melalui gerakan yang khas dan sering kali disertai dengan musik tradisional Betawi, Ondel-ondel menciptakan suasana yang meriah dan ceria. Ondel-ondel tidak hanya menjadi simbol identitas Jakarta, tetapi juga menjadi daya tarik wisata budaya yang terkenal di ibu kota Indonesia.",
+            "https://asset-a.grid.id//crop/0x0:0x0/360x240/photo/bobofoto/original/7325_ondel-ondel-betawi-foto-bintangpluscom.jpg"
         ),
         Budaya(
             9,
-            "Danau Kelimutu",
-            "Danau Kelimutu berada di Gunung Kelimutu, gunung berapi yang berada di Kecamatan Kelimutu, Kabupaten Ende, Pulau Flores, Nusa Tenggara Timur. Kelimutu sendiri berasal dari kata keli yang berarti gunung dan dan mutu yang artinya mendidih, sehingga secara harfiah Kelimutu bisa diartikan sebagai Gunung yang Mendidih.",
-            "https://pariwisataindonesia.id/wp-content/uploads/2022/10/Pariwisata-Indonesia-Danau-Kelimutu-NTT.jpg"
-
+            "Tari Kecak",
+            "Tari Kecak adalah sebuah tarian drama yang berasal dari Bali, Indonesia. Pertunjukan ini menggabungkan gerakan tari dengan vokal dan suara yang dihasilkan oleh sekelompok penari laki-laki yang membentuk lingkaran. Sejarah Tari Kecak bermula pada tahun 1930-an di desa Bona, Bali, sebagai hasil kolaborasi antara seniman Wayan Limbak dan seniman Jerman, Walter Spies. Inspirasi untuk menciptakan tarian ini didasarkan pada tradisi ritual dan cerita Ramayana. Dalam Tari Kecak, para penari laki-laki mengenakan kain koteka di pinggang dan duduk melingkar sambil menyanyikan \"cak\" secara bersama-sama, menciptakan irama dan suara yang kuat. " +
+                    "\n"+"Pertunjukan Tari Kecak biasanya menceritakan kisah Rama, Sita, dan Hanuman dalam perjalanan mereka melawan kejahatan Ravana. Dengan gerakan yang dinamis dan suara yang menggetarkan, Tari Kecak menciptakan pengalaman yang kuat dan memukau bagi penontonnya, dan menjadi salah satu daya tarik budaya yang terkenal di Bali dan diakui secara internasional.",
+            "https://img.okezone.com/content/2022/11/03/406/2700085/jadi-kebanggaan-bali-inilah-makna-sejarah-dan-filosofi-tari-kecak-I8yHApS8Eu.JPG"
         ),
         Budaya(
             10,
-            "Sumba",
-            "Pulau Sumba adalah sebuah pulau di Provinsi Nusa Tenggara Timur, Indonesia. Luas wilayahnya 10.710 km², dan titik tertingginya Gunung Wanggameti (1.225 m). Sumba berbatasan dengan Sumbawa di sebelah barat laut, Flores di timur laut, Timor di timur, dan Australia di selatan dan tenggara. Selat Sumba terletak di utara pulau ini. Di bagian timur terletak Laut Sawu serta Samudra Hindia terletak di sebelah selatan dan barat.",
-            "https://asset.kompas.com/crops/-3MIxb5roqJn6RzBhBsZ3eFEo78=/0x27:1000x694/750x500/data/photo/2022/02/15/620b1a0e70a9e.jpg"
-
+            "Tari Piring",
+            "Tari Piring adalah sebuah tarian tradisional yang berasal dari Minangkabau, Sumatra Barat, Indonesia. Tarian ini memukau dengan gerakan penari yang memegang piring di tangan mereka dan melakukan gerakan-gerakan akrobatik yang menakjubkan. Sejarah Tari Piring terkait dengan kehidupan masyarakat Minangkabau yang memiliki kekayaan budaya yang kuat. Konon, tarian ini awalnya muncul sebagai bagian dari ritual pertanian yang dijalankan untuk memohon kelimpahan hasil panen. Namun, seiring berjalannya waktu, Tari Piring berkembang menjadi tarian hiburan yang dipentaskan dalam acara perayaan dan upacara adat. Piring-piring yang dipegang oleh para penari melambangkan keberlimpahan dan kemakmuran. " +
+                    "\n"+"Dalam pertunjukan, para penari menampilkan gerakan lincah, melompat, berputar, dan melemparkan piring-piring dengan keahlian yang luar biasa, menciptakan suasana yang enerjik dan mempesona. Tari Piring tidak hanya menjadi bagian tak terpisahkan dari budaya Minangkabau, tetapi juga telah dikenal dan diapresiasi di tingkat nasional maupun internasional sebagai salah satu tarian tradisional Indonesia yang menawan dan menggugah.",
+            "https://lh3.googleusercontent.com/-3rdiZsb4cW4/WAq9GML3fuI/AAAAAAAAFH4/Rx-h-Ury3pg/s640/Sejarah-Asal-Usul-Tari-Piring-serta-Perkembangannya-Kumpulan-Sejarah.png"
         ),
 
     )

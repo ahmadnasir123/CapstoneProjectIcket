@@ -126,10 +126,7 @@ fun HomeContent(
                 }
             }
         }
-
-
-//        BudayaRow(rekomendata)
-        Spacer(modifier = modifier.height(10.dp))
+      Spacer(modifier = modifier.height(10.dp))
     }
 
 

@@ -6,11 +6,11 @@ object RekomendasiDataWisata {
     val wisatadata = listOf(
         Wisata(
             1,
-            "balige",
+            "Danau Toba",
             "Danau Toba di Sumatera Utara merupakan salah satu destinasi super prioritas yang ditetapkan Kementerian Pariwisata dan Ekonomi Kreatif (Kemenparekraf). Danau Toba ini diperkirakan terbentuk dari letusan dahsyat gunung api, Gunung Toba, yang terjadi 74 ribu tahun lalu. \n" +
                     "\"Danau Toba juga dikelilingi oleh perbukitan dan tanaman hijau subur. Jangan lupa, ketika Anda mengunjungi danau ini, pastikan Anda mendatangi Pulau Samosir yang merupakan pulau menawan di tengah danau. Kemudian di desa-desa terdekat, Anda juga dapat menjelajahi budaya Batak yang mempesona.\n",
-            "https://storage.googleapis.com/capstone-icket-387805.appspot.com/aceh/aceh.jpg"
-            ),
+            "https://www.goodnewsfromindonesia.id/uploads/post/large-caldera-toba-027faa33b652d880ad1e45fee6b7b0f9.jpg"
+        ),
         Wisata(
             2,
             "Raja Ampat",
