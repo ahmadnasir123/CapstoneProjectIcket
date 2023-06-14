@@ -1,6 +1,7 @@
 package com.C23PS326.icket.data
 
 import com.C23PS326.icket.model.OrderRekomendasi
+import com.C23PS326.icket.model.OrderWisata
 import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
 import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
 import com.C23PS326.icket.model.team.OrderTeam
@@ -10,6 +11,7 @@ import kotlinx.coroutines.flow.flowOf
 
 class Repository {
     private val rekomen = mutableListOf<OrderRekomendasi>()
+    private val wisatan = mutableListOf<OrderWisata>()
     private val team = mutableListOf<OrderTeam>()
 
     init {
@@ -18,9 +20,13 @@ class Repository {
                 rekomen.add(OrderRekomendasi(it,0))
             }
         }
-        if (rekomen.isEmpty()) {
+
+    }
+
+    init {
+        if (wisatan.isEmpty()) {
             RekomendasiDataWisata.wisatadata.forEach{
-                rekomen.add(OrderRekomendasi(it,0))
+                wisatan.add(OrderWisata(it,0))
             }
         }
     }
@@ -34,6 +40,7 @@ class Repository {
         }
     }
 
+
     init {
         if (team.isEmpty()) {
             TeamData.teamdata.forEach{
@@ -44,6 +51,10 @@ class Repository {
 
     fun getRekomendasi(): Flow<MutableList<OrderRekomendasi>> {
         return flowOf(rekomen)
+    }
+
+    fun getWisata(): Flow<MutableList<OrderWisata>> {
+        return flowOf(wisatan)
     }
 
     fun getTeam(): Flow<MutableList<OrderTeam>> {
@@ -69,3 +80,4 @@ class Repository {
     }
 
 }
+

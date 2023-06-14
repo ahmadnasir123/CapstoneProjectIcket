@@ -29,6 +29,7 @@ import com.C23PS326.icket.ui.navigation.Screen
 import com.C23PS326.icket.ui.screen.Provinsi
 import com.C23PS326.icket.ui.screen.about.ScreenAbout
 import com.C23PS326.icket.ui.screen.home.HomeScreen
+import com.C23PS326.icket.ui.screen.provinsi.BudayaScreen
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.ui.theme.lightblue
 import com.C23PS326.icket.ui.theme.redColor
@@ -91,8 +92,8 @@ fun JetIcketApp(
                 arguments = listOf(navArgument("rewardId") { type = NavType.LongType }),
             ) {
                 val id = it.arguments?.getLong("rewardId") ?: -1L
-                DetailProvinsiScreen(
-                    provinsiId = id,
+                BudayaScreen(
+                    wisataId = id,
                     navigateBack = {
                         navController.navigateUp()
                     },

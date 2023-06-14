@@ -1,5 +1,6 @@
 package com.C23PS326.icket.ui.screen.provinsi
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -32,7 +33,7 @@ import com.C23PS326.icket.R
 import com.C23PS326.icket.di.Injection
 
 @Composable
-fun ProvinsiScreen(
+fun BudayaScreen(
     wisataId: Long,
     viewModel: DetailViewModel = viewModel(
         factory = ViewModelFactory(
@@ -40,6 +41,7 @@ fun ProvinsiScreen(
         )
 
     ),
+    navigateBack: () -> Unit,
 
 ) {
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
@@ -50,7 +52,8 @@ fun ProvinsiScreen(
             is UiState.Success -> {
                 val data = uiState.data
                 DetailContent(
-                    data.rekomendasi
+                    data.rekomendasi,
+                    onBackClick = navigateBack,
                 )
             }
             is UiState.Error -> {}
@@ -61,6 +64,7 @@ fun ProvinsiScreen(
 @Composable
 fun DetailContent(
     data: Rekomendasi,
+    onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier) {
@@ -68,6 +72,7 @@ fun DetailContent(
             modifier = modifier
                 .verticalScroll(rememberScrollState())
                 .weight(1f)
+                .clickable { onBackClick() }
         ) {
             Box{
                 AsyncImage(
@@ -121,9 +126,8 @@ fun DetailProvinsiPreview() {
                 "Raja Ampat",
                 "Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di barat bagian Semenanjung Kepala Burung (Vogelkoop) Pulau Papua. Secara administrasi, gugusan ini berada di bawah Kabupaten Raja Ampat dan Kota Sorong, Provinsi Papua Barat Daya. Kepulauan ini sekarang menjadi tujuan para penyelam yang tertarik akan keindahan pemandangan bawah lautnya. Empat gugusan pulau yang menjadi anggotanya dinamakan menurut empat pulau terbesarnya, yaitu Pulau Waigeo, Pulau Misool, Pulau Salawati, dan Pulau Batanta.",
                 "https://www.wisataidn.com/wp-content/uploads/2021/10/Tempat-Wisata-di-Raja-Ampat.jpeg"
-
-
-            )
+            ),
+            onBackClick = { }
         )
     }
 }

@@ -19,6 +19,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.C23PS326.icket.R
 import com.C23PS326.icket.di.Injection
 import com.C23PS326.icket.model.OrderRekomendasi
+import com.C23PS326.icket.model.OrderWisata
 import com.C23PS326.icket.model.Rekomendasi
 import com.C23PS326.icket.model.dummyCategory
 import com.C23PS326.icket.ui.ViewModelFactory
@@ -38,10 +39,12 @@ fun HomeScreen(
         when (uiState) {
             is UiState.Loading -> {
                 viewModel.getAllRewards()
+                viewModel.getWisata()
             }
             is UiState.Success -> {
                 HomeContent(
                     orderRekomendasi = uiState.data,
+//                    orderWisata= uiState.data,
                     modifier = modifier,
                     navigateToDetail = navigateToDetail,
                 )
@@ -51,9 +54,12 @@ fun HomeScreen(
     }
 }
 
+
+
 @Composable
 fun HomeContent(
     orderRekomendasi: List<OrderRekomendasi>,
+//    orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
     navigateToDetail: (Long) -> Unit,
 
@@ -71,7 +77,6 @@ fun HomeContent(
                 text = stringResource(R.string.section_populer_budaya,
                 )
             )
-
         }
 
         Box(modifier = modifier) {
@@ -119,7 +124,7 @@ fun HomeContent(
                 contentPadding = PaddingValues(horizontal = 16.dp),
             ) {
                 items(orderRekomendasi) { data ->
-                    WisataListItem(
+                    BudayaListItem(
                         id = data.rekomendasi.rekomenId,
                         name = data.rekomendasi.name,
                         image = data.rekomendasi.image,
