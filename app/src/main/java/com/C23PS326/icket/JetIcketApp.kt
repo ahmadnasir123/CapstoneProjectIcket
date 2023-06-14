@@ -30,6 +30,7 @@ import com.C23PS326.icket.ui.screen.Provinsi
 import com.C23PS326.icket.ui.screen.about.ScreenAbout
 import com.C23PS326.icket.ui.screen.home.HomeScreen
 import com.C23PS326.icket.ui.screen.provinsi.BudayaScreen
+import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataScreen
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.ui.theme.lightblue
 import com.C23PS326.icket.ui.theme.redColor
@@ -79,6 +80,13 @@ fun JetIcketApp(
                     }
                 )
             }
+            composable(Screen.Home.route) {
+                HomeScreen(
+                    navigateToDetail = { wisataId ->
+                        navController.navigate(Screen.DetailWisata.CreateRoute(wisataId))
+                    }
+                )
+            }
             composable(Screen.About.route) {
                 ScreenAbout()
             }
@@ -89,8 +97,6 @@ fun JetIcketApp(
                     }
                 )
             }
-
-
             composable(
                 route = Screen.DetailBudaya.route,
                 arguments = listOf(navArgument("budayaId") { type = NavType.LongType }),
@@ -98,6 +104,18 @@ fun JetIcketApp(
                 val id = it.arguments?.getLong("budayaId") ?: -1L
                 BudayaScreen(
                     budayaId = id,
+                    navigateBack = {
+                        navController.navigateUp()
+                    },
+                )
+            }
+            composable(
+                route = Screen.DetailWisata.route,
+                arguments = listOf(navArgument("wisataId") { type = NavType.LongType }),
+            ) {
+                val id = it.arguments?.getLong("wisataId") ?: -1L
+                WisataScreen(
+                    wisataId = id,
                     navigateBack = {
                         navController.navigateUp()
                     },

@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.C23PS326.icket.data.Repository
 import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.screen.home.HomeViewModel
+import com.C23PS326.icket.ui.screen.home.ShowWisataViewModel
 import com.C23PS326.icket.ui.screen.provinsi.ProvinsiViewModel
 import com.C23PS326.icket.ui.screen.provinsi.listItem.BudayaViewModel
+import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataViewModel
 
 class ViewModelFactory(private val repository: Repository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -28,6 +30,15 @@ class ViewModelFactory(private val repository: Repository) :
         } else if (modelClass.isAssignableFrom(DetailViewModel::class.java)) {
             return DetailViewModel(repository) as T
         }
+
+        if (modelClass.isAssignableFrom(ShowWisataViewModel::class.java)) {
+            return ShowWisataViewModel(repository) as T
+        } else if (modelClass.isAssignableFrom(WisataViewModel::class.java)) {
+            return WisataViewModel(repository) as T
+        } else if (modelClass.isAssignableFrom(WisataViewModel::class.java)) {
+            return WisataViewModel(repository) as T
+        }
+
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }
 }

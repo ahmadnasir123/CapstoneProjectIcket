@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.flowOf
 
 class Repository {
     private val budaya = mutableListOf<OrderBudaya>()
-    private val wisatan = mutableListOf<OrderWisata>()
+    private val wisata = mutableListOf<OrderWisata>()
     private val team = mutableListOf<OrderTeam>()
     private val provinsi = mutableListOf<OrderProvinsi>()
 
@@ -27,9 +27,9 @@ class Repository {
     }
 
     init {
-        if (wisatan.isEmpty()) {
+        if (wisata.isEmpty()) {
             RekomendasiDataWisata.wisatadata.forEach{
-                wisatan.add(OrderWisata(it,0))
+                wisata.add(OrderWisata(it,0))
             }
         }
     }
@@ -53,6 +53,9 @@ class Repository {
     fun getAllRewards(): Flow<List<OrderBudaya>> {
         return flowOf(budaya)
     }
+    fun getAllWisata(): Flow<List<OrderWisata>> {
+        return flowOf(wisata)
+    }
     fun getOrderRewardById(budayaId: Long): OrderBudaya {
         return budaya.first {
             it.budaya.budayaId == budayaId
@@ -73,7 +76,7 @@ class Repository {
     }
 
     fun getWisata(): Flow<MutableList<OrderWisata>> {
-        return flowOf(wisatan)
+        return flowOf(wisata)
     }
 
     fun getTeam(): Flow<MutableList<OrderTeam>> {
@@ -109,6 +112,11 @@ class Repository {
     fun getBudayaById(rekomenId: Long): OrderBudaya {
         return budaya.first() {
             it.budaya.budayaId == rekomenId
+        }
+    }
+    fun getWisataById(wisataId: Long): OrderWisata {
+        return wisata.first() {
+            it.wisata.wisataId == wisataId
         }
     }
 

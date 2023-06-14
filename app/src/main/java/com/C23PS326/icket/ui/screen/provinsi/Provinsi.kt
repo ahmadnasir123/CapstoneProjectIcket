@@ -73,21 +73,21 @@ fun ProvinsiContent(
                 )
             }
         }
-        AnimatedVisibility(
-            visible = showBtn,
-            enter = fadeIn() + slideInVertically(),
-            exit = fadeOut() + slideOutVertically(),
-            modifier = Modifier
-                .padding(bottom = 30.dp, end = 30.dp)
-                .align(Alignment.BottomEnd)
-        ) {
-            ScrollToTopButton(
-                onClick = {
-                    scope.launch{
-                        listState.scrollToItem(index = 0)
-                    }
-                }
-            )
-        }
+//        AnimatedVisibility(
+//            visible = showBtn,
+//            enter = fadeIn() + slideInVertically(),
+//            exit = fadeOut() + slideOutVertically(),
+//            modifier = Modifier
+//                .padding(bottom = 30.dp, end = 30.dp)
+//                .align(Alignment.BottomEnd)
+//        ) {
+//            ScrollToTopButton(
+//                onClick = {
+//                    scope.launch{
+//                        listState.scrollToItem(index = 0)
+//                    }
+//                }
+//            )
+//        }
     }
 }

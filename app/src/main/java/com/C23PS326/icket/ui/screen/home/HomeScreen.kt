@@ -13,17 +13,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.C23PS326.icket.R
 import com.C23PS326.icket.di.Injection
 import com.C23PS326.icket.model.OrderBudaya
 import com.C23PS326.icket.model.Budaya
+import com.C23PS326.icket.model.OrderWisata
 import com.C23PS326.icket.model.dummyCategory
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.components.*
+import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataViewModel
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 @Composable
@@ -32,25 +36,46 @@ fun HomeScreen(
     viewModel: HomeViewModel = viewModel(
         factory = ViewModelFactory(Injection.provideRepository())
     ),
+    viewModel2: ShowWisataViewModel = viewModel(
+        factory = ViewModelFactory(Injection.provideRepository())
+    ),
     navigateToDetail: (Long) -> Unit,
 ) {
-    viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
-        when (uiState) {
-            is UiState.Loading -> {
-                viewModel.getAllRewards()
-                viewModel.getWisata()
-            }
-            is UiState.Success -> {
-                HomeContent(
-                    orderBudaya = uiState.data,
+    Column(
+    ) {
+        viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
+            when (uiState) {
+                is UiState.Loading -> {
+                    viewModel.getBudaya()
+                }
+                is UiState.Success -> {
+                    HomeContent(
+                        orderBudaya = uiState.data,
 //                    orderWisata= uiState.data,
-                    modifier = modifier,
-                    navigateToDetail = navigateToDetail,
-                )
+                        modifier = modifier,
+                        navigateToDetail = navigateToDetail,
+                    )
+                }
+                is UiState.Error -> {}
             }
-            is UiState.Error -> {}
+        }
+        viewModel2.uIState.collectAsState(initial = UiState.Loading).value.let { uIstate ->
+            when (uIstate){
+                is UiState.Loading -> {
+                    viewModel2.getWisata()
+                }
+                is UiState.Success -> {
+                    HomeContent2(
+                        orderWisata = uIstate.data,
+                        modifier = modifier,
+                        navigateToDetail = navigateToDetail
+                    )
+                }
+                is UiState.Error -> {}
+            }
         }
     }
+
 }
 
 
@@ -64,17 +89,18 @@ fun HomeContent(
 
     ) {
     Column(
-        modifier =modifier
+        modifier = modifier
             .verticalScroll((rememberScrollState()))
     ) {
         Banner()
         CategoryRow()
         Column(
-            modifier = Modifier.padding(24.dp)
+            modifier = Modifier.padding(start = 24.dp, bottom = 6.dp)
         ) {
             Text(
-                text = stringResource(R.string.section_populer_budaya,
-                )
+                text = stringResource(R.string.section_populer_budaya),
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
             )
         }
 
@@ -87,7 +113,7 @@ fun HomeContent(
 
             LazyRow(
                 state = listState,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
                 contentPadding = PaddingValues(horizontal = 16.dp),
             ) {
                 items(orderBudaya) { data ->
@@ -101,42 +127,56 @@ fun HomeContent(
             }
         }
 
-        Column(
-            modifier = Modifier.padding(24.dp)
-        ) {
-            Text(
-                text = stringResource(R.string.section_populer_wisata,
 
-                    )
-            )
-        }
-        Box(modifier = modifier) {
-            val scope = rememberCoroutineScope()
-            val listState = rememberLazyListState()
-            val showBtn: Boolean by remember {
-                derivedStateOf { listState.firstVisibleItemIndex > 0 }
-            }
-
-            LazyRow(
-                state = listState,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                contentPadding = PaddingValues(horizontal = 16.dp),
-            ) {
-                items(orderBudaya) { data ->
-                    BudayaListItem(
-                        id = data.budaya.budayaId,
-                        name = data.budaya.name,
-                        image = data.budaya.image,
-                        navigateToDetail = navigateToDetail
-                    )
-                }
-            }
-        }
 //        BudayaRow(rekomendata)
         Spacer(modifier = modifier.height(10.dp))
     }
 
 
+}
+
+@Composable
+fun HomeContent2(
+    orderWisata: List<OrderWisata>,
+    modifier: Modifier = Modifier,
+    navigateToDetail: (Long) -> Unit,
+){
+    Column(
+        modifier =modifier
+            .verticalScroll((rememberScrollState()))
+    ){
+        Column(
+            modifier = Modifier.padding(start = 24.dp, bottom = 8.dp, top = 18.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.section_populer_wisata),
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
+        }
+        Box(modifier = modifier) {
+            val scope = rememberCoroutineScope()
+            val listState = rememberLazyListState()
+            val showBtn: Boolean by remember {
+                derivedStateOf { listState.firstVisibleItemIndex > 0 }
+            }
+
+            LazyRow(
+                state = listState,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                contentPadding = PaddingValues(horizontal = 16.dp),
+            ) {
+                items(orderWisata) { data ->
+                    WisataListItem(
+                        id = data.wisata.wisataId,
+                        name = data.wisata.name,
+                        image = data.wisata.image,
+                        navigateToDetail = navigateToDetail
+                    )
+                }
+            }
+        }
+    }
 }
 
 
