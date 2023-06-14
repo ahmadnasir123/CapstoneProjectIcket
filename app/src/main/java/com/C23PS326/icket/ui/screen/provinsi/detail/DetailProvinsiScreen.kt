@@ -26,7 +26,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.C23PS326.icket.R
 import com.C23PS326.icket.data.Repository
-import com.C23PS326.icket.model.Rekomendasi
+import com.C23PS326.icket.model.provinsi.Provinsi
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
@@ -47,7 +47,7 @@ fun DetailProvinsiScreen(
             is UiState.Success -> {
                 val data = uiState.data
                 DetailContent(
-                    data.rekomendasi,
+                    data.provinsi,
                     onBackClick = navigateBack,
                 )
             }
@@ -58,7 +58,7 @@ fun DetailProvinsiScreen(
 
 @Composable
 fun DetailContent(
-    data: Rekomendasi,
+    data: Provinsi,
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ){
@@ -82,7 +82,7 @@ fun DetailContent(
                 modifier = Modifier.padding(16.dp)
             ) {
                 AsyncImage(
-                    model = data.image,
+                    model = data.photo,
                     contentDescription = "Character Image",
                     contentScale = ContentScale.Crop,
                     placeholder = painterResource(id = R.drawable.placeholder),
@@ -333,9 +333,10 @@ fun DetailContent(
 fun DetailProvinsiPreview(){
     ICKETTheme() {
         DetailContent(
-            data = Rekomendasi(
+            data = Provinsi(
                 1,
                 "Bali",
+                "Denpasar",
                 "Provinsi Bali adalah sebuah provinsi di Indonesia yang terletak di Pulau Bali. Bali terkenal sebagai salah satu destinasi pariwisata terbaik di dunia dengan keindahan alamnya yang menakjubkan, budaya yang kaya, dan pantai-pantai yang indah. Ibukota provinsi ini adalah Kota Denpasar. Bali memiliki sejumlah objek wisata populer seperti Pantai Kuta, Ubud yang terkenal dengan seni dan budayanya, Tanah Lot yang terletak di atas laut, dan Pura Besakih sebagai pura terbesar dan terpenting di Bali. Selain itu, Bali juga memiliki tradisi dan upacara adat yang khas seperti Upacara Kuningan, Ngaben (upacara kremasi), dan Ogoh-ogoh pada hari raya Nyepi. Bali juga terkenal dengan kerajinan tangan seperti ukiran kayu, batik, dan perak. Dengan keunikan dan keindahannya, Bali menjadi tujuan wisata yang sangat populer baik bagi wisatawan lokal maupun mancanegara.",
                 "https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg"
             ),
