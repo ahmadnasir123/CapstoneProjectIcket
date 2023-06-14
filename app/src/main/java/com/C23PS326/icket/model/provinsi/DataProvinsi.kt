@@ -5,51 +5,31 @@ object DataProvinsi {
     val dataprovinsi = listOf(
         Provinsi(
             1,
-            "Papua Barat Daya",
-        "Sorong",
-        "Papua Barat Daya adalah sebuah provinsi di Indonesia, dan merupakan pemekaran dari Papua Barat. Meski bernama Barat Daya, namun provinsi ini terletak di bagian barat laut Pulau Papua, sebuah contoh misnomer."
+            "Bali",
+            "Denpasar",
+            "Provinsi Bali adalah sebuah provinsi di Indonesia yang terletak di Pulau Bali. Bali terkenal sebagai salah satu destinasi pariwisata terbaik di dunia dengan keindahan alamnya yang menakjubkan, budaya yang kaya, dan pantai-pantai yang indah. Ibukota provinsi ini adalah Kota Denpasar. Bali memiliki sejumlah objek wisata populer seperti Pantai Kuta, Ubud yang terkenal dengan seni dan budayanya, Tanah Lot yang terletak di atas laut, dan Pura Besakih sebagai pura terbesar dan terpenting di Bali. Selain itu, Bali juga memiliki tradisi dan upacara adat yang khas seperti Upacara Kuningan, Ngaben (upacara kremasi), dan Ogoh-ogoh pada hari raya Nyepi. Bali juga terkenal dengan kerajinan tangan seperti ukiran kayu, batik, dan perak. Dengan keunikan dan keindahannya, Bali menjadi tujuan wisata yang sangat populer baik bagi wisatawan lokal maupun mancanegara.",
+            "https://image.urlaubspiraten.de/640/image/upload/v1603282722/mediavault_images/ihjatwhtozn7ljfgtad7.jpg"
         ),
         Provinsi(
             2,
-            "Papua Selatan",
-            "Merauke",
-            "Papua Selatan adalah salah satu provinsi di Indonesia yang telah dimekarkan dari Provinsi Papua. Ibu kotanya berada di Kabupaten Merauke, tepatnya di Kota Terpadu Mandiri Salor di Distrik Kurik sekitar 60 km dari Kota Merauke"
+            "Nanggroe Aceh Darussalam",
+            "Banda Aceh",
+            "sebuah provinsi di Indonesia yang terletak di ujung barat Pulau Sumatra. Kota utama dan ibu kota provinsi ini adalah Banda Aceh. Aceh memiliki sejarah dan budaya yang kaya, dengan pengaruh dari berbagai kerajaan dan kebudayaan yang pernah berkuasa di wilayah ini. Sejarah Aceh mencakup berbagai periode, mulai dari Kerajaan Samudera Pasai pada abad ke-13 hingga masa penjajahan oleh Belanda. Aceh juga dikenal sebagai pusat perdagangan rempah-rempah dan Islam di Asia Tenggara. Pada abad ke-17, Aceh menjadi kerajaan Islam yang kuat dan melawan serangan kolonial Belanda dalam Perang Aceh.",
+            "https://www.indonesia.travel/content/dam/indtravelrevamp/id-id/destinasi/banda-aceh/image-1.jpg"
         ),
         Provinsi(
             3,
-            "Papua Pegunungan",
-            "Sorong",
-            "Papua Pegunungan adalah sebuah provinsi di Indonesia yang dimekarkan dari provinsi Papua pada sidang Paripurna DPR RI pada tanggal 30 Juni 2022. Ibu kotanya berkedudukan di Kabupaten Jayawijaya."
+            "Bangka Belitung",
+            "Pangkal Pinang",
+            "Provinsi Kepulauan Bangka Belitung adalah sebuah provinsi di Indonesia yang terdiri dari dua pulau utama yaitu Pulau Bangka dan Pulau Belitung serta pulau-pulau kecil lainnya. Bangka Belitung terletak di bagian timur Pulau Sumatra, dekat dengan Provinsi Sumatra Selatan. Posisi geografis provinsi ini adalah 1º50′ – 3º10′ LS dan 105º – 108º BT. Bangka Belitung dikenal sebagai daerah penghasil timah, memiliki pantai yang indah dan kerukunan antar etnis. Ibu kota provinsi ini ialah Pangkalpinang. Pemerintahan provinsi ini disahkan pada tanggal 9 Februari 2001.",
+            "https://www.tempatwisata.pro/media/uploads/3064/83444209afef85d5519fd60c2839a43b.jpg"
         ),
         Provinsi(
             4,
-            "Papua Tengah",
-            "Nabire",
-            "Papua Tengah adalah sebuah provinsi di Indonesia yang telah dimekarkan dari provinsi Papua pada tahun 2022.Ibukota Provinsi ini berada di Kabupaten Nabire.Papua Tengah dimekarkan dari Provinsi Papua bersama dua provinsi lainnya yakni Papua Pegunungan dan Papua Selatan pada 30 Juni 2022 berdasarkan Undang-Undang Nomor 15 Tahun 2022.Cakupan wilayah Papua Tengah kira-kira sesuai dengan wilayah adat Mee Pago dan Saireri. Kabupaten Nabire di bagian utara Papua Tengah merupakan dataran rendah berbatasan langsung dengan Taman Nasional Teluk Cenderawasih yang memiliki potensi pariwisata bahari seperti terumbu karang, pulau-pulau berpasir putih dan hiu paus.Bagian tengah Papua Tengah terdapat kawasan Danau Paniai dan Pegunungan Jayawijaya. Di provinsi ini terdapat gunung tertinggi di Indonesia yaitu Puncak Jaya serta tambang emas Grasberg yang dioperasikan oleh Freeport Indonesia.Bagian selatan Papua Tengah adalah Kabupaten Mimika dengan ibu kotanya Timika yang merupakan salah satu kota besar di Pulau Papua. Sedangkan topografi Mimika berupa rawa-rawa, sungai, dan pantai."
-        ),
-        Provinsi(
-            5,
-            "Papua Barat",
-            "Manokwari",
-            "Provinsi Papua Barat adalah sebuah provinsi di Indonesia. Ibu kota provinsi ini adalah Kota Manokwari. Provinsi Papua Barat terletak di bagian barat Pulau Papua dan berbatasan dengan Provinsi Papua di sebelah timur. Papua Barat memiliki luas wilayah sekitar 114.566 kilometer persegi dan merupakan provinsi terbesar kedua di Indonesia setelah Provinsi Papua."
-        ),
-        Provinsi(
-            6,
-            "Sulawesi Barat",
-            "Mamuju",
-            "Papua Barat Daya adalah sebuah provinsi di Indonesia, dan merupakan pemekaran dari Papua Barat. Meski bernama Barat Daya, namun provinsi ini terletak di bagian barat laut Pulau Papua, sebuah contoh misnomer."
-        ),
-        Provinsi(
-            7,
-            "Kepulauan Riau",
-            "Tanjung Pinang",
-            "Papua Barat Daya adalah sebuah provinsi di Indonesia, dan merupakan pemekaran dari Papua Barat. Meski bernama Barat Daya, namun provinsi ini terletak di bagian barat laut Pulau Papua, sebuah contoh misnomer."
-        ),
-        Provinsi(
-            8,
-            "Gorontalo",
-            "Gorontalo",
-            "Papua Barat Daya adalah sebuah provinsi di Indonesia, dan merupakan pemekaran dari Papua Barat. Meski bernama Barat Daya, namun provinsi ini terletak di bagian barat laut Pulau Papua, sebuah contoh misnomer."
+            "Banten",
+            "Serang",
+            "Provinsi Banten adalah sebuah provinsi di Pulau Jawa, Indonesia. Ibukotanya adalah Kota Serang. Provinsi Banten terletak di bagian barat Pulau Jawa dan berbatasan dengan Laut Jawa di sebelah utara, Provinsi DKI Jakarta di sebelah timur, Provinsi Jawa Barat di sebelah selatan dan barat daya, serta Selat Sunda di sebelah barat. Provinsi Banten memiliki sejarah yang kaya dan pernah menjadi bagian dari Kerajaan Banten yang berpengaruh pada masa lalu",
+            "https://asset.kompas.com/crops/_i1RkpLoZ-G0TAXkDKoLf-9Gnp0=/23x11:964x639/750x500/data/photo/2022/03/12/622ca58e77830.jpg"
         ),
     )
 }
