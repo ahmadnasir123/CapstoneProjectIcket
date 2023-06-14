@@ -74,7 +74,19 @@ fun DetailContent(
                 .weight(1f)
                 .clickable { onBackClick() }
         ) {
-            Box{
+            Box() {
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = stringResource(R.string.back),
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .clickable { onBackClick() }
+                )
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.padding(16.dp)
+            ){
                 AsyncImage(
                     model = data.image,
                     contentDescription = "Photo Wisata",
@@ -85,31 +97,25 @@ fun DetailContent(
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
                 )
-                Icon(
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = stringResource(R.string.back),
-                    modifier = Modifier
-                        .padding(16.dp)
-                )
-            }
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.padding(16.dp)
-            ) {
-                Text(
-                    text = data.name,
-                    textAlign = TextAlign.Center,
-                    style = MaterialTheme.typography.h4.copy(
-                        fontWeight = FontWeight.ExtraBold
-                    ),
-                )
-                Text(
-                    text = data.desc,
-                    style = MaterialTheme.typography.body1,
-                    textAlign = TextAlign.Justify,
-                )
-            }
 
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        text = data.name,
+                        textAlign = TextAlign.Center,
+                        style = MaterialTheme.typography.h4.copy(
+                            fontWeight = FontWeight.ExtraBold
+                        ),
+                    )
+                    Text(
+                        text = data.desc,
+                        style = MaterialTheme.typography.body1,
+                        textAlign = TextAlign.Justify,
+                    )
+                }
+            }
         }
     }
 }
