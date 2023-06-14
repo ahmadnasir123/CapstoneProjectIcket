@@ -48,7 +48,7 @@ fun JetIcketApp(
         Screen.Home.route -> {
             topBarState.value = true
         }
-        Screen.DetailReward.route -> {
+        Screen.DetailBudaya.route -> {
             topBarState.value = false
         }
         Screen.Provinsi.route -> {
@@ -61,7 +61,7 @@ fun JetIcketApp(
 
     Scaffold(
         bottomBar = {
-            if (currentRoute != Screen.DetailReward.route) {
+            if (currentRoute != Screen.DetailBudaya.route) {
                 BottomBar(navController)
             }
         },
@@ -74,8 +74,8 @@ fun JetIcketApp(
         ) {
             composable(Screen.Home.route) {
                 HomeScreen(
-                    navigateToDetail = { rewardId ->
-                        navController.navigate(Screen.DetailReward.createRoute(rewardId))
+                    navigateToDetail = { budayaId ->
+                        navController.navigate(Screen.DetailBudaya.createRoute(budayaId))
                     }
                 )
             }
@@ -92,12 +92,12 @@ fun JetIcketApp(
 
 
             composable(
-                route = Screen.DetailReward.route,
-                arguments = listOf(navArgument("rewardId") { type = NavType.LongType }),
+                route = Screen.DetailBudaya.route,
+                arguments = listOf(navArgument("budayaId") { type = NavType.LongType }),
             ) {
-                val id = it.arguments?.getLong("rewardId") ?: -1L
+                val id = it.arguments?.getLong("budayaId") ?: -1L
                 BudayaScreen(
-                    wisataId = id,
+                    budayaId = id,
                     navigateBack = {
                         navController.navigateUp()
                     },

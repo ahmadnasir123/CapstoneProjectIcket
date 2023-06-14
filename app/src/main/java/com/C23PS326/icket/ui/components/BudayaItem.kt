@@ -14,12 +14,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import coil.compose.AsyncImage
-import com.C23PS326.icket.model.Rekomendasi
+import com.C23PS326.icket.model.Budaya
 import com.C23PS326.icket.R
 
 @Composable
 fun BudayaItem(
-    budaya: Rekomendasi,
+    budaya: Budaya,
     modifier: Modifier = Modifier,
 ) {
     Card (
@@ -59,7 +59,7 @@ fun BudayaItem(
 fun BudayaItemPreview() {
     MaterialTheme {
         BudayaItem(
-            budaya =  Rekomendasi(
+            budaya =  Budaya(
                 1,
                 "Wayang Kulit",
                 "Wayang kulit merupakan seni tradisional Indonesia yang lahir, hidup, dan berkembang terutama di masyarakat Jawa. Dalam pertunjukannya, wayang kulit bukan hanya sekadar hiburan, tetapi juga menyimpan nilai spiritual dan filosofis yang mendalam. Melalui media kulit kerbau, seorang dalang memainkan karakter-karakter dalam cerita wayang, disertai dengan musik gamelan dan nyanyian pesinden.\n" +

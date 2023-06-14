@@ -16,11 +16,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.C23PS326.icket.R
-import com.C23PS326.icket.model.Rekomendasi
+import com.C23PS326.icket.model.Budaya
 
 @Composable
 fun WisataItem(
-    wisata: Rekomendasi,
+    wisata: Budaya,
     modifier: Modifier = Modifier,
 ) {
     Card (
@@ -61,7 +61,7 @@ fun WisataItem(
 fun WisataItemPreview() {
     MaterialTheme {
         WisataItem(
-            wisata =    Rekomendasi(
+            wisata =    Budaya(
                 4,
                 "Nusa Penida",
                 "Nusa Penida adalah sebuah pulau (=nusa) bagian dari negara Republik Indonesia yang terletak di sebelah tenggara Bali yang dipisahkan oleh Selat Badung. Di dekat pulau ini terdapat juga pulau-pulau kecil lainnya yaitu Nusa Ceningan dan Nusa Lembongan. Perairan pulau Nusa Penida terkenal dengan kawasan selamnya di antaranya terdapat di Crystal Bay, Manta Point, Batu Meling, Batu Lumbung, Batu Abah, Toyapakeh dan Malibu Point.",

@@ -24,18 +24,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import com.C23PS326.icket.model.Rekomendasi
+import com.C23PS326.icket.model.Budaya
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
-import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.R
 import com.C23PS326.icket.di.Injection
+import com.C23PS326.icket.ui.screen.provinsi.listItem.BudayaViewModel
 
 @Composable
 fun BudayaScreen(
-    wisataId: Long,
-    viewModel: DetailViewModel = viewModel(
+    budayaId: Long,
+    viewModel: BudayaViewModel = viewModel(
         factory = ViewModelFactory(
                 Injection.provideRepository()
         )
@@ -47,12 +47,12 @@ fun BudayaScreen(
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
-                viewModel.getProvinsiId(wisataId)
+                viewModel.getBudaya(budayaId)
             }
             is UiState.Success -> {
                 val data = uiState.data
                 DetailContent(
-                    data.rekomendasi,
+                    data.budaya,
                     onBackClick = navigateBack,
                 )
             }
@@ -63,7 +63,7 @@ fun BudayaScreen(
 
 @Composable
 fun DetailContent(
-    data: Rekomendasi,
+    data: Budaya,
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -127,7 +127,7 @@ fun DetailContent(
 fun DetailProvinsiPreview() {
     ICKETTheme {
         DetailContent(
-            data = Rekomendasi(
+            data = Budaya(
                 2,
                 "Raja Ampat",
                 "Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di barat bagian Semenanjung Kepala Burung (Vogelkoop) Pulau Papua. Secara administrasi, gugusan ini berada di bawah Kabupaten Raja Ampat dan Kota Sorong, Provinsi Papua Barat Daya. Kepulauan ini sekarang menjadi tujuan para penyelam yang tertarik akan keindahan pemandangan bawah lautnya. Empat gugusan pulau yang menjadi anggotanya dinamakan menurut empat pulau terbesarnya, yaitu Pulau Waigeo, Pulau Misool, Pulau Salawati, dan Pulau Batanta.",

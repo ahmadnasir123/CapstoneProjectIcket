@@ -3,7 +3,6 @@ package com.C23PS326.icket.ui.screen.provinsi.detail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.C23PS326.icket.data.Repository
-import com.C23PS326.icket.model.OrderRekomendasi
 import com.C23PS326.icket.model.provinsi.OrderProvinsi
 import com.C23PS326.icket.ui.common.UiState
 import kotlinx.coroutines.flow.MutableStateFlow

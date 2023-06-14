@@ -18,9 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.C23PS326.icket.R
 import com.C23PS326.icket.di.Injection
-import com.C23PS326.icket.model.OrderRekomendasi
-import com.C23PS326.icket.model.OrderWisata
-import com.C23PS326.icket.model.Rekomendasi
+import com.C23PS326.icket.model.OrderBudaya
+import com.C23PS326.icket.model.Budaya
 import com.C23PS326.icket.model.dummyCategory
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
@@ -43,7 +42,7 @@ fun HomeScreen(
             }
             is UiState.Success -> {
                 HomeContent(
-                    orderRekomendasi = uiState.data,
+                    orderBudaya = uiState.data,
 //                    orderWisata= uiState.data,
                     modifier = modifier,
                     navigateToDetail = navigateToDetail,
@@ -58,7 +57,7 @@ fun HomeScreen(
 
 @Composable
 fun HomeContent(
-    orderRekomendasi: List<OrderRekomendasi>,
+    orderBudaya: List<OrderBudaya>,
 //    orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
     navigateToDetail: (Long) -> Unit,
@@ -91,11 +90,11 @@ fun HomeContent(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 contentPadding = PaddingValues(horizontal = 16.dp),
             ) {
-                items(orderRekomendasi) { data ->
+                items(orderBudaya) { data ->
                     BudayaListItem(
-                        id = data.rekomendasi.rekomenId,
-                        name = data.rekomendasi.name,
-                        image = data.rekomendasi.image,
+                        id = data.budaya.budayaId,
+                        name = data.budaya.name,
+                        image = data.budaya.image,
                         navigateToDetail = navigateToDetail
                     )
                 }
@@ -123,11 +122,11 @@ fun HomeContent(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 contentPadding = PaddingValues(horizontal = 16.dp),
             ) {
-                items(orderRekomendasi) { data ->
+                items(orderBudaya) { data ->
                     BudayaListItem(
-                        id = data.rekomendasi.rekomenId,
-                        name = data.rekomendasi.name,
-                        image = data.rekomendasi.image,
+                        id = data.budaya.budayaId,
+                        name = data.budaya.name,
+                        image = data.budaya.image,
                         navigateToDetail = navigateToDetail
                     )
                 }
@@ -174,7 +173,7 @@ fun CategoryRow(
 
 @Composable
 fun BudayaRow(
-    listMenu: List<Rekomendasi>,
+    listMenu: List<Budaya>,
     modifier: Modifier = Modifier
 ) {
     LazyRow(
@@ -197,7 +196,7 @@ fun BudayaRow(
 
 @Composable
 fun WisataRow(
-    listMenu: List<Rekomendasi>,
+    listMenu: List<Budaya>,
     modifier: Modifier = Modifier,
 
 

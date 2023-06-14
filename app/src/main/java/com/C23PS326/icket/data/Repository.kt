@@ -1,6 +1,6 @@
 package com.C23PS326.icket.data
 
-import com.C23PS326.icket.model.OrderRekomendasi
+import com.C23PS326.icket.model.OrderBudaya
 import com.C23PS326.icket.model.OrderWisata
 import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
 import com.C23PS326.icket.model.provinsi.DataProvinsi
@@ -12,15 +12,15 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
 class Repository {
-    private val rekomen = mutableListOf<OrderRekomendasi>()
+    private val budaya = mutableListOf<OrderBudaya>()
     private val wisatan = mutableListOf<OrderWisata>()
     private val team = mutableListOf<OrderTeam>()
     private val provinsi = mutableListOf<OrderProvinsi>()
 
     init {
-        if (rekomen.isEmpty()) {
-            RekomendasiDataBudaya.rekomendata.forEach{
-                rekomen.add(OrderRekomendasi(it,0))
+        if (budaya.isEmpty()) {
+            RekomendasiDataBudaya.budayadata.forEach{
+                budaya.add(OrderBudaya(it,0))
             }
         }
 
@@ -50,12 +50,12 @@ class Repository {
         }
     }
 
-    fun getAllRewards(): Flow<List<OrderRekomendasi>> {
-        return flowOf(rekomen)
+    fun getAllRewards(): Flow<List<OrderBudaya>> {
+        return flowOf(budaya)
     }
-    fun getOrderRewardById(rewardId: Long): OrderRekomendasi {
-        return rekomen.first {
-            it.rekomendasi.rekomenId == rewardId
+    fun getOrderRewardById(budayaId: Long): OrderBudaya {
+        return budaya.first {
+            it.budaya.budayaId == budayaId
         }
     }
 
@@ -68,8 +68,8 @@ class Repository {
         }
     }
 
-    fun getRekomendasi(): Flow<MutableList<OrderRekomendasi>> {
-        return flowOf(rekomen)
+    fun getRekomendasi(): Flow<MutableList<OrderBudaya>> {
+        return flowOf(budaya)
     }
 
     fun getWisata(): Flow<MutableList<OrderWisata>> {
@@ -80,9 +80,9 @@ class Repository {
         return flowOf(team)
     }
 
-    fun getOrderById(wisataId: Long): OrderRekomendasi {
-        return rekomen.first() {
-            it.rekomendasi.rekomenId == wisataId
+    fun getOrderById(budayaId: Long): OrderBudaya {
+        return budaya.first() {
+            it.budaya.budayaId == budayaId
         }
     }
     fun getInstance(): Repository =
@@ -96,11 +96,22 @@ class Repository {
         return flowOf(provinsi)
     }
 
+    fun getBudaya(): Flow<MutableList<OrderBudaya>> {
+        return flowOf(budaya)
+    }
+
     fun getOrderByIdProvinsi(provinsiId: Long): OrderProvinsi {
         return provinsi.first() {
             it.provinsi.provinsiId == provinsiId
         }
     }
+
+    fun getBudayaById(rekomenId: Long): OrderBudaya {
+        return budaya.first() {
+            it.budaya.budayaId == rekomenId
+        }
+    }
+
 
 
     companion object {
