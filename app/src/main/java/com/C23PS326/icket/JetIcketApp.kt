@@ -14,7 +14,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -23,12 +22,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.C23PS326.icket.screen.DetailProvinsiScreen
-import com.C23PS326.icket.splash_screen.SplashScreen
 import com.C23PS326.icket.ui.navigation.NavigationItem
 import com.C23PS326.icket.ui.navigation.Screen
 import com.C23PS326.icket.ui.screen.Provinsi
 import com.C23PS326.icket.ui.screen.about.ScreenAbout
-import com.C23PS326.icket.ui.screen.categori.wisata.CategoriWisataScreen
 import com.C23PS326.icket.ui.screen.home.HomeScreen
 import com.C23PS326.icket.ui.screen.provinsi.BudayaScreen
 import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataScreen

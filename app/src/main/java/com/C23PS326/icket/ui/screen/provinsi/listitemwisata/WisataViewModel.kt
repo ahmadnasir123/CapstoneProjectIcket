@@ -16,23 +16,10 @@ class WisataViewModel(private val repository: Repository) : ViewModel() {
         MutableStateFlow(UiState.Loading)
     val uiState2: StateFlow<UiState<OrderWisata>>
         get() = _uiState
-    private val _query = mutableStateOf("")
-    val query: State<String> get() = _query
-
     fun getWisata2(wisatId: Long) {
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             _uiState.value = UiState.Success(repository.getWisataById(wisatId))
         }
     }
-
-
-    fun search(newQuery: String) {
-        _query.value = newQuery
-//        _groupedHeroes.value = repository.searchItem(_query.value)
-//            .sortedBy { it.name }
-//            .groupBy { it.name[0] }
-    }
-
-
 }
