@@ -12,6 +12,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import com.C23PS326.icket.model.makanan.OrderMakanan
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -56,7 +57,7 @@ fun MakananContent(
         modifier = Modifier.padding(24.dp)
     ) {
         Text(
-            text = "Makanan",
+            text = "Makanan Khas Bali",
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp
         )
