@@ -1,9 +1,7 @@
 package com.C23PS326.icket.data
 
 import com.C23PS326.icket.model.budaya.OrderBudaya
-import com.C23PS326.icket.model.wisata.OrderWisata
 import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
-import com.C23PS326.icket.model.categori.wisata.CategoriDataWisata
 import com.C23PS326.icket.model.categori.wisata.OrderWisataCategori
 import com.C23PS326.icket.model.makanan.DataMakanan
 import com.C23PS326.icket.model.makanan.OrderMakanan
@@ -12,7 +10,7 @@ import com.C23PS326.icket.model.provinsi.OrderProvinsi
 import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
 import com.C23PS326.icket.model.team.OrderTeam
 import com.C23PS326.icket.model.team.TeamData
-import com.C23PS326.icket.model.wisata.Wisata
+import com.C23PS326.icket.model.wisata.OrderWisata
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
@@ -21,8 +19,8 @@ class Repository {
     private val wisata = mutableListOf<OrderWisata>()
     private val team = mutableListOf<OrderTeam>()
     private val provinsi = mutableListOf<OrderProvinsi>()
-    private val wisataCategori = mutableListOf<OrderWisataCategori>()
     private val makanan = mutableListOf<OrderMakanan>()
+    private val wisataCategori = mutableListOf<OrderWisataCategori>()
 
     init {
         if (budaya.isEmpty()) {
@@ -37,13 +35,6 @@ class Repository {
         if (wisata.isEmpty()) {
             RekomendasiDataWisata.wisatadata.forEach{
                 wisata.add(OrderWisata(it,0))
-            }
-        }
-    }
-    init {
-        if (wisataCategori.isEmpty()) {
-            CategoriDataWisata.wisatadatacategori.forEach{
-                wisataCategori.add(OrderWisataCategori(it,0))
             }
         }
     }
@@ -64,15 +55,25 @@ class Repository {
         }
     }
 
+    init {
+        if (makanan.isEmpty()) {
+            DataMakanan.datamakanan.forEach {
+                makanan.add(OrderMakanan(it, 0))
+            }
+        }
+    }
+
     fun getAllBudaya(): Flow<List<OrderBudaya>> {
         return flowOf(budaya)
     }
     fun getAllWisata(): Flow<List<OrderWisata>> {
         return flowOf(wisata)
     }
+
     fun getAllWisataCategori(): Flow<List<OrderWisataCategori>> {
         return flowOf(wisataCategori)
     }
+
     fun getOrderRewardById(budayaId: Long): OrderBudaya {
         return budaya.first {
             it.budaya.budayaId == budayaId
@@ -85,12 +86,6 @@ class Repository {
             TeamData.teamdata.forEach{
                 team.add(OrderTeam(it,0))
             }
-        }
-    }
-
-    fun searchItem(query: String): List<Wisata>{
-        return RekomendasiDataWisata.wisatadata.filter {
-            it.name.contains(query, ignoreCase = true)
         }
     }
 
@@ -117,10 +112,6 @@ class Repository {
         return flowOf(provinsi)
     }
 
-    fun getWisataCategori(): Flow<MutableList<OrderWisataCategori>> {
-        return flowOf(wisataCategori)
-    }
-
     fun getBudaya(): Flow<MutableList<OrderBudaya>> {
         return flowOf(budaya)
     }
@@ -142,13 +133,9 @@ class Repository {
         }
     }
 
-    fun getWisataCategoryById(wisataCategoriId: Long): OrderWisataCategori {
-        return wisataCategori.first() {
-            it.wisatacategori.wisataId == wisataCategoriId
-        }
+    fun getWisataCategori(): Flow<MutableList<OrderWisataCategori>> {
+        return flowOf(wisataCategori)
     }
-
-
 
     fun getMakanan(): Flow<MutableList<OrderMakanan>> {
         return flowOf(makanan)
@@ -169,4 +156,3 @@ class Repository {
     }
 
 }
-

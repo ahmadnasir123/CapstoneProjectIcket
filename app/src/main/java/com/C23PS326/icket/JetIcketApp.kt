@@ -104,9 +104,11 @@ fun JetIcketApp(
                     },
                 )
             }
+
             composable(Screen.About.route) {
                 ScreenAbout()
             }
+
             composable(Screen.Provinsi.route) {
                 Provinsi(
                     navigateToDetail = {provinsiId ->
@@ -114,6 +116,7 @@ fun JetIcketApp(
                     }
                 )
             }
+
             composable(Screen.ListMakanan.route) {
                 Makanan(
                     navigateToDetail = {makananId ->
@@ -121,6 +124,7 @@ fun JetIcketApp(
                     }
                 )
             }
+
             composable(
                 route = Screen.DetailBudaya.route,
                 arguments = listOf(navArgument("rewardId") { type = NavType.LongType }),
@@ -133,6 +137,7 @@ fun JetIcketApp(
                     },
                 )
             }
+
             composable(
                 route = Screen.DetailWisata.route,
                 arguments = listOf(navArgument("wisataId") { type = NavType.LongType }),
