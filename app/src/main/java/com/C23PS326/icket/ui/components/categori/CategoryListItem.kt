@@ -25,6 +25,7 @@ fun CategoyListItem(
     image: String,
     modifier: Modifier = Modifier,
     navigateToDetail: (Long) -> Unit,
+
 ) {
     Card (
         modifier = modifier.width(140.dp)

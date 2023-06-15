@@ -63,7 +63,7 @@ fun ProvinsiContent(
             state = listState,
             contentPadding = PaddingValues(bottom = 80.dp)
         ) {
-            items(orderProvinsi) {data ->
+            items(orderProvinsi) { data ->
                 ProvinsiListItem(
                     id = data.provinsi.provinsiId,
                     name = data.provinsi.name,
@@ -72,33 +72,33 @@ fun ProvinsiContent(
                 )
             }
         }
-    Column(
-        modifier = Modifier.padding(24.dp)
-    ) {
-        Text(
-            text = "Provinsi",
-            fontWeight = FontWeight.Bold,
-            fontSize = 16.sp
-        )
-        Box(modifier = modifier) {
-            val scope = rememberCoroutineScope()
-            val listState = rememberLazyListState()
-            val showBtn: Boolean by remember {
-                derivedStateOf { listState.firstVisibleItemIndex > 0 }
-            }
-            LazyColumn(
-                state = listState,
-                contentPadding = PaddingValues(bottom = 80.dp)
-            ) {
-                items(orderProvinsi) {data ->
-                    ProvinsiListItem(
-                        id = data.provinsi.provinsiId,
-                        name = data.provinsi.name,
-                        ibukota = data.provinsi.ibukota,
-                        navigateToDetail = navigateToDetail
-                    )
+        Column(
+            modifier = Modifier.padding(24.dp)
+        ) {
+            Text(
+                text = "Provinsi",
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
+            Box(modifier = modifier) {
+                val scope = rememberCoroutineScope()
+                val listState = rememberLazyListState()
+                val showBtn: Boolean by remember {
+                    derivedStateOf { listState.firstVisibleItemIndex > 0 }
                 }
-            }
+                LazyColumn(
+                    state = listState,
+                    contentPadding = PaddingValues(bottom = 80.dp)
+                ) {
+                    items(orderProvinsi) { data ->
+                        ProvinsiListItem(
+                            id = data.provinsi.provinsiId,
+                            name = data.provinsi.name,
+                            ibukota = data.provinsi.ibukota,
+                            navigateToDetail = navigateToDetail
+                        )
+                    }
+                }
 //            AnimatedVisibility(
 //                visible = showBtn,
 //                enter = fadeIn() + slideInVertically(),
@@ -115,6 +115,7 @@ fun ProvinsiContent(
 //                    }
 //                )
 //            }
+            }
         }
     }
 }

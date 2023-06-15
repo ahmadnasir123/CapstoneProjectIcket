@@ -47,10 +47,44 @@ fun SearchBar(
     )
 }
 
-@Preview(showBackground = true)
-@Composable
-fun SearchBarPreview(){
-    ICKETTheme(){
-        SearchBar()
-    }
-}
+
+
+//@Composable
+//fun SearchBar(
+//    query: String,
+//    onQueryChange: (String) -> Unit,
+//    modifier: Modifier = Modifier
+//) {
+//    TextField(
+//        value = query,
+//        onValueChange = onQueryChange,
+//        leadingIcon = {
+//            Icon(
+//                imageVector = Icons.Default.Search,
+//                contentDescription = null
+//            )
+//        },
+//        colors = TextFieldDefaults.textFieldColors(
+//            backgroundColor = MaterialTheme.colors.surface,
+//            disabledIndicatorColor = Color.Transparent,
+//            focusedIndicatorColor = Color.Transparent,
+//            unfocusedIndicatorColor = Color.Transparent,
+//        ),
+//        placeholder = {
+//            Text(stringResource(R.string.placeholder_search))
+//        },
+//        modifier = modifier
+//            .padding(16.dp)
+//            .fillMaxWidth()
+//            .heightIn(min = 48.dp)
+//            .clip(RoundedCornerShape(16.dp))
+//    )
+//}
+
+//@Preview(showBackground = true)
+//@Composable
+//fun SearchBarPreview(){
+//    ICKETTheme(){
+//        SearchBar()
+//    }
+//}

@@ -28,6 +28,7 @@ import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.components.*
 import com.C23PS326.icket.ui.screen.provinsi.listItem.ShowBudayaViewModel
+import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.ShowWisataViewModel
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 @Composable
@@ -40,7 +41,6 @@ fun HomeScreen(
         factory = ViewModelFactory(Repository())
     ),
     navigateToDetail: (Long) -> Unit,
-    navigateToDetailWisata: (Long) -> Unit,
 ) {
     Column(
     ) {
@@ -68,7 +68,7 @@ fun HomeScreen(
                     HomeContent2(
                         orderWisata = uIstate.data,
                         modifier = modifier,
-                        navigateToDetailWisata = navigateToDetailWisata
+                        navigateToDetail= navigateToDetail
                     )
                 }
                 is UiState.Error -> {}
@@ -132,7 +132,7 @@ fun HomeContent(
 fun HomeContent2(
     orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
-    navigateToDetailWisata: (Long) -> Unit,
+    navigateToDetail: (Long) -> Unit,
 ){
     Column(
         modifier =modifier
@@ -190,7 +190,7 @@ fun Banner(
 
 @Composable
 fun CategoryRow(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 
 ) {
     LazyRow(

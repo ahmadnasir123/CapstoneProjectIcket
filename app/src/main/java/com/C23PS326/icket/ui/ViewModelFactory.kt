@@ -7,7 +7,7 @@ import com.C23PS326.icket.ui.screen.categori.wisata.CategoriWisataViewModel
 import com.C23PS326.icket.ui.screen.categori.wisata.ShowWisataCategoriViewModel
 import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.screen.provinsi.listItem.ShowBudayaViewModel
-import com.C23PS326.icket.ui.screen.home.ShowWisataViewModel
+import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.ShowWisataViewModel
 import com.C23PS326.icket.ui.screen.provinsi.ProvinsiViewModel
 import com.C23PS326.icket.ui.screen.provinsi.listItem.BudayaViewModel
 import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataViewModel

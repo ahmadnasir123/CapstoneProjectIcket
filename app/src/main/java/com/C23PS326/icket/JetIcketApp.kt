@@ -11,9 +11,11 @@ import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -22,6 +24,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.C23PS326.icket.screen.DetailProvinsiScreen
+import com.C23PS326.icket.splash_screen.SplashScreen
 import com.C23PS326.icket.ui.navigation.NavigationItem
 import com.C23PS326.icket.ui.navigation.Screen
 import com.C23PS326.icket.ui.screen.Provinsi
@@ -76,7 +79,7 @@ fun JetIcketApp(
             startDestination = Screen.Home.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(Screen.Home.route) {
+            composable(Screen.Home2.route) {
                 HomeScreen(
                     navigateToDetail = { budayaId ->
                         navController.navigate(Screen.DetailBudaya.createRoute(budayaId))
@@ -94,11 +97,7 @@ fun JetIcketApp(
                 HomeScreen(
                     navigateToDetail = { wisataCategoriId ->
                         navController.navigate(Screen.DetailWisataCategori.createRoute(wisataCategoriId))
-                        navController.navigate(Screen.DetailBudaya.CreateRoute(budayaId))
                     },
-                    navigateToDetailWisata = { wisataId ->
-                        navController.navigate(Screen.DetailWisata.CreateRoute(wisataId))
-                    }
                 )
             }
             composable(Screen.About.route) {
@@ -135,18 +134,6 @@ fun JetIcketApp(
                     },
                 )
             }
-//            composable(
-//                route = Screen.DetailWisataCategori.route,
-//                arguments = listOf(navArgument("wisataCategoriId") { type = NavType.LongType }),
-//            ) {
-//                val id = it.arguments?.getLong("wisataCategoriId") ?: -1L
-//                CategoriWisataScreen(
-//                    wisataCategoriId = id,
-//                    navigateBack = {
-//                        navController.navigateUp()
-//                    },
-//                )
-//            }
             composable(
                 route = Screen.DetailProvinsi.route,
                 arguments = listOf(navArgument("provinsiId") { type = NavType.LongType }),
@@ -162,13 +149,22 @@ fun JetIcketApp(
             }
 
             composable(
+                route = Screen.ListWisata.route
+            ) {
+                // Komposisi halaman makanan
+            }
+            composable(
                 route = Screen.ListMakanan.route
             ) {
                 // Komposisi halaman makanan
             }
         }
     }
+//    navigation()
 }
+
+
+
 
 @Composable
 private fun BottomBar(

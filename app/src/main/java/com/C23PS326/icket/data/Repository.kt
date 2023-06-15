@@ -10,6 +10,7 @@ import com.C23PS326.icket.model.provinsi.OrderProvinsi
 import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
 import com.C23PS326.icket.model.team.OrderTeam
 import com.C23PS326.icket.model.team.TeamData
+import com.C23PS326.icket.model.wisata.Wisata
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
@@ -81,6 +82,12 @@ class Repository {
             TeamData.teamdata.forEach{
                 team.add(OrderTeam(it,0))
             }
+        }
+    }
+
+    fun searchItem(query: String): List<Wisata>{
+        return RekomendasiDataWisata.wisatadata.filter {
+            it.name.contains(query, ignoreCase = true)
         }
     }
 

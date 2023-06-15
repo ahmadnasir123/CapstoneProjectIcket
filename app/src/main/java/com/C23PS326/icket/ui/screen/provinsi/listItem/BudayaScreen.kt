@@ -42,7 +42,6 @@ fun BudayaScreen(
         when (uiState) {
             is UiState.Loading -> {
                 viewModel.getBudaya2(budayaId)
-                viewModel.getBudayaId(budayaId)
             }
             is UiState.Success -> {
                 val data = uiState.data

@@ -2,11 +2,11 @@ package com.C23PS326.icket.ui.navigation
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")
+    object Home2 : Screen("home2")
     object Provinsi : Screen("provinsi")
     object About : Screen("about")
-    object DetailBudaya : Screen("home/{budayaId}") {
-        fun createRoute(budayaId: Long) = "home/$budayaId"
-        fun CreateRoute(budayaId: Long) = "home/$budayaId"
+    object DetailBudaya : Screen("home2/{budayaId}") {
+        fun createRoute(budayaId: Long) = "home2/$budayaId"
     }
     object DetailWisata : Screen("home/{wisataId}"){
         fun createRoute(wisataId: Long) = "home/$wisataId"
@@ -20,4 +20,6 @@ sealed class Screen(val route: String) {
     }
 
     object ListMakanan : Screen("makanan")
+
+    object ListWisata : Screen("wisata")
 }

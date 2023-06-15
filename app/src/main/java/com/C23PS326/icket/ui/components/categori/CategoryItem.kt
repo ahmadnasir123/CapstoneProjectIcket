@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,28 +18,40 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import com.C23PS326.icket.R
 import com.C23PS326.icket.model.categori.Category
 import com.C23PS326.icket.ui.theme.ICKETTheme
+import com.C23PS326.icket.ui.theme.yellowColor
 
 @Composable
 fun CategoryItem(
     category: Category,
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {},
-){
+//    navigateToWisataPage: () -> Unit
+) {
     Column(
         modifier = modifier
-        .clickable { onClick() }
+            .clickable { onClick() }
             .padding(horizontal = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Button(
+            onClick = {  },
+            modifier = Modifier
+                .weight(1f)
+                .padding(2.dp)
+                .clip(RoundedCornerShape(16.dp)),
+            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.yellowColor)
+        ) {
+            // Konten tombol
+        }
         Image(
             painter = painterResource(category.imageCategory),
             contentDescription = null,
-            modifier = Modifier
-                .size(60.dp)
+            modifier = Modifier.size(60.dp)
         )
         Text(
             text = stringResource(category.textCategory),
@@ -44,6 +60,7 @@ fun CategoryItem(
         )
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
@@ -55,7 +72,8 @@ fun CategoryItemPreview(){
                 R.string.txt_wisata,
             ),
             modifier = Modifier.padding(horizontal = 8.dp),
-            onClick = {}
+            onClick = {},
+//            navigateToWisataPage = {}
         )
     }
 }
