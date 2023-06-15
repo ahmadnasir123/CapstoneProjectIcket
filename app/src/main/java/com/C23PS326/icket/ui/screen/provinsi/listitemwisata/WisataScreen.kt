@@ -28,8 +28,8 @@ import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.R
-import com.C23PS326.icket.di.Injection
-import com.C23PS326.icket.model.Wisata
+import com.C23PS326.icket.data.Repository
+import com.C23PS326.icket.model.wisata.Wisata
 
 
 @Composable
@@ -37,7 +37,7 @@ fun WisataScreen(
     wisataId: Long,
     viewModel: WisataViewModel = viewModel(
         factory = ViewModelFactory(
-            Injection.provideRepository()
+            Repository()
         )
 
     ),

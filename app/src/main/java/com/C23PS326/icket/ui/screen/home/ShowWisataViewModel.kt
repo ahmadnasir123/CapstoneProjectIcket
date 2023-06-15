@@ -3,8 +3,7 @@ package com.C23PS326.icket.ui.screen.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.C23PS326.icket.data.Repository
-import com.C23PS326.icket.model.OrderBudaya
-import com.C23PS326.icket.model.OrderWisata
+import com.C23PS326.icket.model.wisata.OrderWisata
 import com.C23PS326.icket.ui.common.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,12 +15,8 @@ class ShowWisataViewModel(
 ) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<List<OrderWisata>>> =
         MutableStateFlow(UiState.Loading)
-    //    private val _uiStateWis: MutableStateFlow<UiState<List<OrderWisata>>> =
-//        MutableStateFlow(UiState.Loading)
     val uIState: StateFlow<UiState<List<OrderWisata>>>
         get() = _uiState
-////    val UIstate: StateFlow<UiState<List<OrderWisata>>>
-//    get() = _uiStateWis
 
     fun getWisata() {
         viewModelScope.launch {

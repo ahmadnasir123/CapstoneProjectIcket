@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import com.C23PS326.icket.model.Budaya
+import com.C23PS326.icket.model.budaya.Budaya
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.theme.ICKETTheme
@@ -46,7 +46,7 @@ fun BudayaScreen(
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
-                viewModel.getBudaya(budayaId)
+                viewModel.getBudaya2(budayaId)
             }
             is UiState.Success -> {
                 val data = uiState.data
@@ -127,10 +127,12 @@ fun DetailBudayaPreview() {
     ICKETTheme {
         DetailContent(
             data = Budaya(
-                2,
-                "Raja Ampat",
-                "Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di barat bagian Semenanjung Kepala Burung (Vogelkoop) Pulau Papua. Secara administrasi, gugusan ini berada di bawah Kabupaten Raja Ampat dan Kota Sorong, Provinsi Papua Barat Daya. Kepulauan ini sekarang menjadi tujuan para penyelam yang tertarik akan keindahan pemandangan bawah lautnya. Empat gugusan pulau yang menjadi anggotanya dinamakan menurut empat pulau terbesarnya, yaitu Pulau Waigeo, Pulau Misool, Pulau Salawati, dan Pulau Batanta.",
-                "https://www.wisataidn.com/wp-content/uploads/2021/10/Tempat-Wisata-di-Raja-Ampat.jpeg"
+                1,
+                "Wayang Kulit ",
+                "\n" +
+                        "Wayang kulit adalah sebuah seni pertunjukan tradisional Indonesia yang memiliki sejarah panjang dan kaya. Seni wayang kulit diperkirakan telah ada sejak sekitar abad ke-10 Masehi dan terus berkembang hingga saat ini. " +
+                        "\n" +"Pertunjukan wayang kulit melibatkan dalang yang mengendalikan boneka-boneka kulit yang diproyeksikan melalui layar putih. Wayang kulit memiliki akar budaya yang kuat dan dipengaruhi oleh berbagai tradisi, seperti Hindu, Budha, dan Islam. Kisah-kisah yang diceritakan dalam wayang kulit sering kali diambil dari epik-epik seperti Ramayana dan Mahabharata, serta cerita-cerita rakyat Indonesia. Selain sebagai hiburan, pertunjukan wayang kulit juga memiliki makna religius dan pendidikan, dengan nilai-nilai moral yang disampaikan melalui dialog dan adegan-a degan dalam pertunjukan. Wayang kulit menjadi bagian penting dalam mempertahankan dan melestarikan warisan budaya dan sejarah Indonesia, serta sebagai sarana ekspresi seni yang unik dan memukau.",
+                "https://pelayananpublik.id/wp-content/uploads/2020/04/Screenshot_20200416-175344_1.jpg"
             ),
             onBackClick = { }
         )

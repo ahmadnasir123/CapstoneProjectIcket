@@ -1,4 +1,4 @@
-package com.C23PS326.icket.model
+package com.C23PS326.icket.model.wisata
 
 data class Wisata(
     val wisataId: Long,

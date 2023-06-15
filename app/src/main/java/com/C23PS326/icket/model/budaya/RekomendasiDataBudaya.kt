@@ -1,7 +1,5 @@
 package com.C23PS326.icket.model.budaya
 
-import com.C23PS326.icket.model.Budaya
-
 object RekomendasiDataBudaya {
     val budayadata = listOf(
         Budaya(

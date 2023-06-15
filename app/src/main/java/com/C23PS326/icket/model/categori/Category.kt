@@ -1,4 +1,4 @@
-package com.C23PS326.icket.model
+package com.C23PS326.icket.model.categori
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

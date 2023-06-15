@@ -1,6 +1,7 @@
 package com.C23PS326.icket.ui.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
@@ -15,16 +16,19 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.C23PS326.icket.R
-import com.C23PS326.icket.model.Category
+import com.C23PS326.icket.model.categori.Category
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 @Composable
 fun CategoryItem(
     category: Category,
     modifier: Modifier = Modifier,
+    onClick: () -> Unit = {},
 ){
     Column(
-        modifier = modifier,
+        modifier = modifier
+        .clickable { onClick() }
+            .padding(horizontal = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
@@ -50,7 +54,8 @@ fun CategoryItemPreview(){
                 R.drawable.wisata,
                 R.string.txt_wisata,
             ),
-            modifier = Modifier.padding(horizontal = 8.dp)
+            modifier = Modifier.padding(horizontal = 8.dp),
+            onClick = {}
         )
     }
 }

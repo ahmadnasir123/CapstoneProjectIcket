@@ -1,43 +1,34 @@
-package com.C23PS326.icket.ui.screen
+package com.C23PS326.icket.ui.screen.categori.wisata
 
-import androidx.compose.animation.*
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.C23PS326.icket.data.Repository
-import com.C23PS326.icket.model.provinsi.OrderProvinsi
+import com.C23PS326.icket.model.categori.wisata.OrderWisataCategori
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
-import com.C23PS326.icket.ui.components.ProvinsiListItem
-import com.C23PS326.icket.ui.components.ScrollToTopButton
-import com.C23PS326.icket.ui.navigation.Screen
-import com.C23PS326.icket.ui.screen.provinsi.ProvinsiViewModel
-import kotlinx.coroutines.launch
+import com.C23PS326.icket.ui.components.categori.CategoyListItem
 
 @Composable
-fun Provinsi(
+fun CategoriWisataScreen(
     modifier: Modifier = Modifier,
-    viewModel: ProvinsiViewModel = viewModel(factory = ViewModelFactory(Repository())),
+    viewModel: CategoriWisataViewModel = viewModel(factory = ViewModelFactory(Repository())),
     navigateToDetail: (Long) -> Unit
 ) {
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
-                viewModel.getProvinsi()
+                viewModel.getWisataCategori()
             }
             is UiState.Success -> {
-                ProvinsiContent(
-                    orderProvinsi = uiState.data,
+                CategoriContent(
+                    orderCategori = uiState.data,
                     modifier = modifier,
                     navigateToDetail = navigateToDetail
                 )
@@ -48,8 +39,8 @@ fun Provinsi(
 }
 
 @Composable
-fun ProvinsiContent(
-    orderProvinsi: List<OrderProvinsi>,
+fun CategoriContent(
+    orderCategori: List<OrderWisataCategori>,
     modifier: Modifier = Modifier,
     navigateToDetail: (Long) -> Unit,
 ) {
@@ -64,11 +55,11 @@ fun ProvinsiContent(
             state = listState,
             contentPadding = PaddingValues(bottom = 80.dp)
         ) {
-            items(orderProvinsi) {data ->
-                ProvinsiListItem(
-                    id = data.provinsi.provinsiId,
-                    name = data.provinsi.name,
-                    ibukota = data.provinsi.ibukota,
+            items(orderCategori) {data ->
+                CategoyListItem(
+                    id = data.wisatacategori.wisataId,
+                    name = data.wisatacategori.name,
+                    image = data.wisatacategori.image,
                     navigateToDetail = navigateToDetail
                 )
             }

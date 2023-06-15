@@ -1,7 +1,5 @@
 package com.C23PS326.icket.model.wisata
 
-import com.C23PS326.icket.model.Wisata
-
 object RekomendasiDataWisata {
     val wisatadata = listOf(
         Wisata(

@@ -1,6 +1,5 @@
 package com.C23PS326.icket
 
-import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.*
@@ -12,7 +11,6 @@ import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -28,13 +26,12 @@ import com.C23PS326.icket.ui.navigation.NavigationItem
 import com.C23PS326.icket.ui.navigation.Screen
 import com.C23PS326.icket.ui.screen.Provinsi
 import com.C23PS326.icket.ui.screen.about.ScreenAbout
+import com.C23PS326.icket.ui.screen.categori.wisata.CategoriWisataScreen
 import com.C23PS326.icket.ui.screen.home.HomeScreen
 import com.C23PS326.icket.ui.screen.provinsi.BudayaScreen
 import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataScreen
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.ui.theme.lightblue
-import com.C23PS326.icket.ui.theme.redColor
-
 
 @Composable
 fun JetIcketApp(
@@ -50,6 +47,12 @@ fun JetIcketApp(
             topBarState.value = true
         }
         Screen.DetailBudaya.route -> {
+            topBarState.value = false
+        }
+        Screen.DetailWisata.route -> {
+            topBarState.value = false
+        }
+        Screen.DetailWisataCategori.route -> {
             topBarState.value = false
         }
         Screen.Provinsi.route -> {
@@ -83,7 +86,14 @@ fun JetIcketApp(
             composable(Screen.Home.route) {
                 HomeScreen(
                     navigateToDetail = { wisataId ->
-                        navController.navigate(Screen.DetailWisata.CreateRoute(wisataId))
+                        navController.navigate(Screen.DetailWisata.createRoute(wisataId))
+                    }
+                )
+            }
+            composable(Screen.Home.route) {
+                HomeScreen(
+                    navigateToDetail = { wisataCategoriId ->
+                        navController.navigate(Screen.DetailWisataCategori.createRoute(wisataCategoriId))
                     }
                 )
             }
@@ -99,9 +109,9 @@ fun JetIcketApp(
             }
             composable(
                 route = Screen.DetailBudaya.route,
-                arguments = listOf(navArgument("budayaId") { type = NavType.LongType }),
+                arguments = listOf(navArgument("rewardId") { type = NavType.LongType }),
             ) {
-                val id = it.arguments?.getLong("budayaId") ?: -1L
+                val id = it.arguments?.getLong("rewardId") ?: -1L
                 BudayaScreen(
                     budayaId = id,
                     navigateBack = {
@@ -121,7 +131,18 @@ fun JetIcketApp(
                     },
                 )
             }
-
+//            composable(
+//                route = Screen.DetailWisataCategori.route,
+//                arguments = listOf(navArgument("wisataCategoriId") { type = NavType.LongType }),
+//            ) {
+//                val id = it.arguments?.getLong("wisataCategoriId") ?: -1L
+//                CategoriWisataScreen(
+//                    wisataCategoriId = id,
+//                    navigateBack = {
+//                        navController.navigateUp()
+//                    },
+//                )
+//            }
             composable(
                 route = Screen.DetailProvinsi.route,
                 arguments = listOf(navArgument("provinsiId") { type = NavType.LongType }),
@@ -135,9 +156,7 @@ fun JetIcketApp(
                 )
             }
         }
-
     }
-
 }
 
 @Composable
@@ -195,8 +214,6 @@ private fun BottomBar(
         }
     }
 }
-
-
 
 @Preview(showBackground = true)
 @Composable

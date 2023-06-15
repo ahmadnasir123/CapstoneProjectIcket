@@ -19,25 +19,25 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.C23PS326.icket.R
-import com.C23PS326.icket.di.Injection
-import com.C23PS326.icket.model.OrderBudaya
-import com.C23PS326.icket.model.Budaya
-import com.C23PS326.icket.model.OrderWisata
-import com.C23PS326.icket.model.dummyCategory
+import com.C23PS326.icket.data.Repository
+import com.C23PS326.icket.model.budaya.OrderBudaya
+import com.C23PS326.icket.model.budaya.Budaya
+import com.C23PS326.icket.model.categori.dummyCategory
+import com.C23PS326.icket.model.wisata.OrderWisata
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.components.*
-import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataViewModel
+import com.C23PS326.icket.ui.screen.provinsi.listItem.ShowBudayaViewModel
 import com.C23PS326.icket.ui.theme.ICKETTheme
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    viewModel: HomeViewModel = viewModel(
-        factory = ViewModelFactory(Injection.provideRepository())
+    viewModel: ShowBudayaViewModel = viewModel(
+        factory = ViewModelFactory(Repository())
     ),
     viewModel2: ShowWisataViewModel = viewModel(
-        factory = ViewModelFactory(Injection.provideRepository())
+        factory = ViewModelFactory(Repository())
     ),
     navigateToDetail: (Long) -> Unit,
 ) {
@@ -51,7 +51,6 @@ fun HomeScreen(
                 is UiState.Success -> {
                     HomeContent(
                         orderBudaya = uiState.data,
-//                    orderWisata= uiState.data,
                         modifier = modifier,
                         navigateToDetail = navigateToDetail,
                     )
@@ -78,12 +77,9 @@ fun HomeScreen(
 
 }
 
-
-
 @Composable
 fun HomeContent(
     orderBudaya: List<OrderBudaya>,
-//    orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
     navigateToDetail: (Long) -> Unit,
 
@@ -103,7 +99,6 @@ fun HomeContent(
                 fontSize = 16.sp
             )
         }
-
         Box(modifier = modifier) {
             val scope = rememberCoroutineScope()
             val listState = rememberLazyListState()
@@ -157,7 +152,6 @@ fun HomeContent2(
             val showBtn: Boolean by remember {
                 derivedStateOf { listState.firstVisibleItemIndex > 0 }
             }
-
             LazyRow(
                 state = listState,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -223,13 +217,6 @@ fun BudayaRow(
         }
     }
 }
-//@Preview(showBackground = true)
-//@Composable
-//fun BudayaRowPreview() {
-//    ICKETTheme {
-//        BudayaRow(rekomendata)
-//    }
-//}
 
 @Composable
 fun WisataRow(
