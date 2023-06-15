@@ -5,6 +5,8 @@ import com.C23PS326.icket.model.wisata.OrderWisata
 import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
 import com.C23PS326.icket.model.categori.wisata.CategoriDataWisata
 import com.C23PS326.icket.model.categori.wisata.OrderWisataCategori
+import com.C23PS326.icket.model.makanan.DataMakanan
+import com.C23PS326.icket.model.makanan.OrderMakanan
 import com.C23PS326.icket.model.provinsi.DataProvinsi
 import com.C23PS326.icket.model.provinsi.OrderProvinsi
 import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
@@ -20,6 +22,7 @@ class Repository {
     private val team = mutableListOf<OrderTeam>()
     private val provinsi = mutableListOf<OrderProvinsi>()
     private val wisataCategori = mutableListOf<OrderWisataCategori>()
+    private val makanan = mutableListOf<OrderMakanan>()
 
     init {
         if (budaya.isEmpty()) {
@@ -145,6 +148,17 @@ class Repository {
         }
     }
 
+
+
+    fun getMakanan(): Flow<MutableList<OrderMakanan>> {
+        return flowOf(makanan)
+    }
+
+    fun getOrderMakananById(makananId: Long): OrderMakanan {
+        return makanan.first() {
+            it.makanan.makananId == makananId
+        }
+    }
 
 
     companion object {

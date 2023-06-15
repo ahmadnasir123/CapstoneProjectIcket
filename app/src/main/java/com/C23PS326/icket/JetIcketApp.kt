@@ -33,6 +33,8 @@ import com.C23PS326.icket.ui.screen.categori.wisata.CategoriWisataScreen
 import com.C23PS326.icket.ui.screen.home.HomeScreen
 import com.C23PS326.icket.ui.screen.provinsi.BudayaScreen
 import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataScreen
+import com.C23PS326.icket.ui.screen.provinsi.makanan.DetailMakanan
+import com.C23PS326.icket.ui.screen.provinsi.makanan.Makanan
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.ui.theme.lightblue
 
@@ -62,6 +64,9 @@ fun JetIcketApp(
             topBarState.value = false
         }
         Screen.About.route -> {
+            topBarState.value = false
+        }
+        Screen.ListMakanan.route -> {
             topBarState.value = false
         }
     }
@@ -110,6 +115,13 @@ fun JetIcketApp(
                     }
                 )
             }
+            composable(Screen.ListMakanan.route) {
+                Makanan(
+                    navigateToDetail = {makananId ->
+                        navController.navigate(Screen.DetailMakanan.createRoute(makananId))
+                    }
+                )
+            }
             composable(
                 route = Screen.DetailBudaya.route,
                 arguments = listOf(navArgument("rewardId") { type = NavType.LongType }),
@@ -134,6 +146,7 @@ fun JetIcketApp(
                     },
                 )
             }
+
             composable(
                 route = Screen.DetailProvinsi.route,
                 arguments = listOf(navArgument("provinsiId") { type = NavType.LongType }),
@@ -154,9 +167,16 @@ fun JetIcketApp(
                 // Komposisi halaman makanan
             }
             composable(
-                route = Screen.ListMakanan.route
+                route = Screen.DetailMakanan.route,
+                arguments = listOf(navArgument("makananId") { type = NavType.LongType }),
             ) {
-                // Komposisi halaman makanan
+                val id = it.arguments?.getLong("makananId") ?: -1L
+                DetailMakanan(
+                    makananId = id,
+                    navigateBack = {
+                        navController.navigateUp()
+                    },
+                )
             }
         }
     }
