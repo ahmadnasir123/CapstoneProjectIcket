@@ -16,12 +16,8 @@ class ShowWisataViewModel(
 ) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<List<OrderWisata>>> =
         MutableStateFlow(UiState.Loading)
-    //    private val _uiStateWis: MutableStateFlow<UiState<List<OrderWisata>>> =
-//        MutableStateFlow(UiState.Loading)
     val uIState: StateFlow<UiState<List<OrderWisata>>>
         get() = _uiState
-////    val UIstate: StateFlow<UiState<List<OrderWisata>>>
-//    get() = _uiStateWis
 
     fun getWisata() {
         viewModelScope.launch {
@@ -34,16 +30,4 @@ class ShowWisataViewModel(
                 }
         }
     }
-
-//    fun getWisata() {
-//        viewModelScope.launch {
-//            repository.getWisata()
-//                .catch {
-//                    _uiStateWis.value = UiState.Error(it.message.toString())
-//                }
-//                .collect { orderWisata ->
-//                    _uiStateWis.value = UiState.Success(orderWisata)
-//                }
-//        }
-//    }
 }

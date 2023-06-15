@@ -40,6 +40,7 @@ fun HomeScreen(
         factory = ViewModelFactory(Injection.provideRepository())
     ),
     navigateToDetail: (Long) -> Unit,
+    navigateToDetailWisata: (Long) -> Unit,
 ) {
     Column(
     ) {
@@ -51,7 +52,6 @@ fun HomeScreen(
                 is UiState.Success -> {
                     HomeContent(
                         orderBudaya = uiState.data,
-//                    orderWisata= uiState.data,
                         modifier = modifier,
                         navigateToDetail = navigateToDetail,
                     )
@@ -68,7 +68,7 @@ fun HomeScreen(
                     HomeContent2(
                         orderWisata = uIstate.data,
                         modifier = modifier,
-                        navigateToDetail = navigateToDetail
+                        navigateToDetailWisata = navigateToDetailWisata
                     )
                 }
                 is UiState.Error -> {}
@@ -83,7 +83,6 @@ fun HomeScreen(
 @Composable
 fun HomeContent(
     orderBudaya: List<OrderBudaya>,
-//    orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
     navigateToDetail: (Long) -> Unit,
 
@@ -128,15 +127,13 @@ fun HomeContent(
         }
       Spacer(modifier = modifier.height(10.dp))
     }
-
-
 }
 
 @Composable
 fun HomeContent2(
     orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
-    navigateToDetail: (Long) -> Unit,
+    navigateToDetailWisata: (Long) -> Unit,
 ){
     Column(
         modifier =modifier
@@ -168,7 +165,7 @@ fun HomeContent2(
                         id = data.wisata.wisataId,
                         name = data.wisata.name,
                         image = data.wisata.image,
-                        navigateToDetail = navigateToDetail
+                        navigateToDetail = navigateToDetailWisata
                     )
                 }
             }
@@ -204,47 +201,6 @@ fun CategoryRow(
     ) {
         items(dummyCategory, key = { it.textCategory }) { category ->
             CategoryItem(category)
-        }
-    }
-}
-
-@Composable
-fun BudayaRow(
-    listMenu: List<Budaya>,
-    modifier: Modifier = Modifier
-) {
-    LazyRow(
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        contentPadding = PaddingValues(horizontal = 16.dp),
-        modifier = modifier
-    ) {
-        items(listMenu, key = { it.name }) { menu ->
-            BudayaItem(menu)
-        }
-    }
-}
-//@Preview(showBackground = true)
-//@Composable
-//fun BudayaRowPreview() {
-//    ICKETTheme {
-//        BudayaRow(rekomendata)
-//    }
-//}
-
-@Composable
-fun WisataRow(
-    listMenu: List<Budaya>,
-    modifier: Modifier = Modifier,
-
-
-    ) {
-    LazyRow(
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        contentPadding = PaddingValues(horizontal = 16.dp),
-        modifier = modifier
-    ) {
-        items(listMenu, key = { it.name }) { menu ->
-            WisataItem(menu)
         }
     }
 }

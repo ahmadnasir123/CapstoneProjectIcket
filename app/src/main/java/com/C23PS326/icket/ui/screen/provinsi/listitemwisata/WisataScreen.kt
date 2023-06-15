@@ -44,7 +44,7 @@ fun WisataScreen(
     navigateBack: () -> Unit,
 
     ) {
-    viewModel.uIState.collectAsState(initial = UiState.Loading).value.let { uiState ->
+    viewModel.uiState2.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
                 viewModel.getWisata2(wisataId)

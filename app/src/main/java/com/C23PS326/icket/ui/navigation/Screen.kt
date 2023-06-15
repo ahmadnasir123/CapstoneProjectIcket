@@ -5,7 +5,7 @@ sealed class Screen(val route: String) {
     object Provinsi : Screen("provinsi")
     object About : Screen("about")
     object DetailBudaya : Screen("home/{budayaId}") {
-        fun createRoute(rewardId: Long) = "home/$rewardId"
+        fun CreateRoute(budayaId: Long) = "home/$budayaId"
     }
     object DetailWisata : Screen("home/{wisataId}"){
         fun CreateRoute(wisataId: Long) = "home/$wisataId"
@@ -14,4 +14,6 @@ sealed class Screen(val route: String) {
     object DetailProvinsi : Screen("provinsi/{provinsiId}"){
         fun createRoute(provinsiId: Long) = "provinsi/$provinsiId"
     }
+
+    object ListMakanan : Screen("makanan")
 }

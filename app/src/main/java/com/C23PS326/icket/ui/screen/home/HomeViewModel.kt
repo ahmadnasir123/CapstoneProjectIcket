@@ -11,21 +11,15 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 
-class HomeViewModel(
-    private val repository: Repository
-) : ViewModel() {
+class HomeViewModel(private val repository: Repository) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<List<OrderBudaya>>> =
         MutableStateFlow(UiState.Loading)
-//    private val _uiStateWis: MutableStateFlow<UiState<List<OrderWisata>>> =
-//        MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<List<OrderBudaya>>>
     get() = _uiState
-////    val UIstate: StateFlow<UiState<List<OrderWisata>>>
-//    get() = _uiStateWis
 
     fun getBudaya() {
         viewModelScope.launch {
-            repository.getAllRewards()
+            repository.getBudaya()
                 .catch {
                     _uiState.value = UiState.Error(it.message.toString())
                 }
@@ -34,16 +28,4 @@ class HomeViewModel(
                 }
         }
     }
-
-//    fun getWisata() {
-//        viewModelScope.launch {
-//            repository.getWisata()
-//                .catch {
-//                    _uiStateWis.value = UiState.Error(it.message.toString())
-//                }
-//                .collect { orderWisata ->
-//                    _uiStateWis.value = UiState.Success(orderWisata)
-//                }
-//        }
-//    }
 }

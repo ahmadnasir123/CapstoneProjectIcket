@@ -20,6 +20,4 @@ class DetailViewModel(private val repository: Repository) : ViewModel() {
             _uiState.value = UiState.Success(repository.getOrderByIdProvinsi(provinsiId))
         }
     }
-
-
 }

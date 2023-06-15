@@ -14,20 +14,8 @@ import kotlinx.coroutines.launch
 class WisataViewModel(private val repository: Repository) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<OrderWisata>> =
         MutableStateFlow(UiState.Loading)
-    val uIState: StateFlow<UiState<OrderWisata>>
+    val uiState2: StateFlow<UiState<OrderWisata>>
         get() = _uiState
-
-//    fun getWisata() {
-//        viewModelScope.launch {
-//            repository.getAllWisata()
-//                .catch {
-//                    _uiState.value = UiState.Error(it.message.toString())
-//                }
-//                .collect { orderWisata ->
-//                    _uiState.value = UiState.Success(orderWisata)
-//                }
-//        }
-//    }
 
     fun getWisata2(wisatId: Long) {
         viewModelScope.launch {

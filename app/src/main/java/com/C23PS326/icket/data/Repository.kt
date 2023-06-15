@@ -83,11 +83,6 @@ class Repository {
         return flowOf(team)
     }
 
-    fun getOrderById(budayaId: Long): OrderBudaya {
-        return budaya.first() {
-            it.budaya.budayaId == budayaId
-        }
-    }
     fun getInstance(): Repository =
         instance ?: synchronized(this) {
             Repository().apply {
@@ -109,9 +104,9 @@ class Repository {
         }
     }
 
-    fun getBudayaById(rekomenId: Long): OrderBudaya {
+    fun getBudayaById(budayaId: Long): OrderBudaya {
         return budaya.first() {
-            it.budaya.budayaId == rekomenId
+            it.budaya.budayaId == budayaId
         }
     }
     fun getWisataById(wisataId: Long): OrderWisata {
@@ -119,8 +114,6 @@ class Repository {
             it.wisata.wisataId == wisataId
         }
     }
-
-
 
     companion object {
         @Volatile

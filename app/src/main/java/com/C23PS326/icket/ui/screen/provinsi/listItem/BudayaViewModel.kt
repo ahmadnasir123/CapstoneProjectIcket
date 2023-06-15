@@ -14,12 +14,10 @@ class BudayaViewModel(private val repository: Repository) : ViewModel() {
         MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<OrderBudaya>> get() = _uiState
 
-    fun getBudaya(budayaId: Long) {
+    fun getBudayaId(budayaId: Long) {
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             _uiState.value = UiState.Success(repository.getBudayaById(budayaId))
         }
     }
-
-
 }

@@ -37,7 +37,7 @@ fun DetailProvinsiScreen(
     provinsiId: Long,
     viewModel: DetailViewModel = viewModel(factory = ViewModelFactory(Repository())),
     navigateBack: () -> Unit,
-
+    navigateToMakananPage: () -> Unit
     ){
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
@@ -49,6 +49,7 @@ fun DetailProvinsiScreen(
                 DetailContent(
                     data.provinsi,
                     onBackClick = navigateBack,
+                    navigateToMakananPage = navigateToMakananPage
                 )
             }
             is UiState.Error -> {}
@@ -59,6 +60,7 @@ fun DetailProvinsiScreen(
 @Composable
 fun DetailContent(
     data: Provinsi,
+    navigateToMakananPage: () -> Unit,
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ){
@@ -136,7 +138,7 @@ fun DetailContent(
                     }
 
                     Button(
-                        onClick = { /* Handle button 3 click */ },
+                        onClick = { navigateToMakananPage() },
                         modifier = Modifier
                             .weight(1f)
                             .padding(4.dp)
@@ -340,7 +342,8 @@ fun DetailProvinsiPreview(){
                 "Provinsi Bali adalah sebuah provinsi di Indonesia yang terletak di Pulau Bali. Bali terkenal sebagai salah satu destinasi pariwisata terbaik di dunia dengan keindahan alamnya yang menakjubkan, budaya yang kaya, dan pantai-pantai yang indah. Ibukota provinsi ini adalah Kota Denpasar. Bali memiliki sejumlah objek wisata populer seperti Pantai Kuta, Ubud yang terkenal dengan seni dan budayanya, Tanah Lot yang terletak di atas laut, dan Pura Besakih sebagai pura terbesar dan terpenting di Bali. Selain itu, Bali juga memiliki tradisi dan upacara adat yang khas seperti Upacara Kuningan, Ngaben (upacara kremasi), dan Ogoh-ogoh pada hari raya Nyepi. Bali juga terkenal dengan kerajinan tangan seperti ukiran kayu, batik, dan perak. Dengan keunikan dan keindahannya, Bali menjadi tujuan wisata yang sangat populer baik bagi wisatawan lokal maupun mancanegara.",
                 "https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg"
             ),
-            onBackClick = { }
+            onBackClick = { },
+            navigateToMakananPage = { }
         )
     }
 }
