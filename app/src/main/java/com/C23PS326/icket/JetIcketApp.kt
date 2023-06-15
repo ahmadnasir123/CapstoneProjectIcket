@@ -31,6 +31,8 @@ import com.C23PS326.icket.ui.screen.about.ScreenAbout
 import com.C23PS326.icket.ui.screen.home.HomeScreen
 import com.C23PS326.icket.ui.screen.provinsi.BudayaScreen
 import com.C23PS326.icket.ui.screen.provinsi.listitemwisata.WisataScreen
+import com.C23PS326.icket.ui.screen.provinsi.makanan.DetailMakanan
+import com.C23PS326.icket.ui.screen.provinsi.makanan.Makanan
 import com.C23PS326.icket.ui.theme.ICKETTheme
 import com.C23PS326.icket.ui.theme.lightblue
 import com.C23PS326.icket.ui.theme.redColor
@@ -56,6 +58,9 @@ fun JetIcketApp(
             topBarState.value = false
         }
         Screen.About.route -> {
+            topBarState.value = false
+        }
+        Screen.ListMakanan.route -> {
             topBarState.value = false
         }
     }
@@ -90,6 +95,13 @@ fun JetIcketApp(
                 Provinsi(
                     navigateToDetail = {provinsiId ->
                         navController.navigate(Screen.DetailProvinsi.createRoute(provinsiId))
+                    }
+                )
+            }
+            composable(Screen.ListMakanan.route) {
+                Makanan(
+                    navigateToDetail = {makananId ->
+                        navController.navigate(Screen.DetailMakanan.createRoute(makananId))
                     }
                 )
             }
@@ -133,9 +145,16 @@ fun JetIcketApp(
             }
 
             composable(
-                route = Screen.ListMakanan.route
+                route = Screen.DetailMakanan.route,
+                arguments = listOf(navArgument("makananId") { type = NavType.LongType }),
             ) {
-                // Komposisi halaman makanan
+                val id = it.arguments?.getLong("makananId") ?: -1L
+                DetailMakanan(
+                    makananId = id,
+                    navigateBack = {
+                        navController.navigateUp()
+                    },
+                )
             }
         }
 

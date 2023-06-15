@@ -3,6 +3,8 @@ package com.C23PS326.icket.data
 import com.C23PS326.icket.model.OrderBudaya
 import com.C23PS326.icket.model.OrderWisata
 import com.C23PS326.icket.model.budaya.RekomendasiDataBudaya
+import com.C23PS326.icket.model.makanan.DataMakanan
+import com.C23PS326.icket.model.makanan.OrderMakanan
 import com.C23PS326.icket.model.provinsi.DataProvinsi
 import com.C23PS326.icket.model.provinsi.OrderProvinsi
 import com.C23PS326.icket.model.wisata.RekomendasiDataWisata
@@ -16,6 +18,7 @@ class Repository {
     private val wisata = mutableListOf<OrderWisata>()
     private val team = mutableListOf<OrderTeam>()
     private val provinsi = mutableListOf<OrderProvinsi>()
+    private val makanan = mutableListOf<OrderMakanan>()
 
     init {
         if (budaya.isEmpty()) {
@@ -46,6 +49,14 @@ class Repository {
         if (provinsi.isEmpty()) {
             DataProvinsi.dataprovinsi.forEach {
                 provinsi.add(OrderProvinsi(it, 0))
+            }
+        }
+    }
+
+    init {
+        if (makanan.isEmpty()) {
+            DataMakanan.datamakanan.forEach {
+                makanan.add(OrderMakanan(it, 0))
             }
         }
     }
@@ -114,6 +125,17 @@ class Repository {
             it.wisata.wisataId == wisataId
         }
     }
+
+    fun getMakanan(): Flow<MutableList<OrderMakanan>> {
+        return flowOf(makanan)
+    }
+
+    fun getOrderMakananById(makananId: Long): OrderMakanan {
+        return makanan.first() {
+            it.makanan.makananId == makananId
+        }
+    }
+
 
     companion object {
         @Volatile
