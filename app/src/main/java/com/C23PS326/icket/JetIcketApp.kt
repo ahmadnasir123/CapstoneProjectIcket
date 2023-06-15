@@ -94,6 +94,10 @@ fun JetIcketApp(
                 HomeScreen(
                     navigateToDetail = { wisataCategoriId ->
                         navController.navigate(Screen.DetailWisataCategori.createRoute(wisataCategoriId))
+                        navController.navigate(Screen.DetailBudaya.CreateRoute(budayaId))
+                    },
+                    navigateToDetailWisata = { wisataId ->
+                        navController.navigate(Screen.DetailWisata.CreateRoute(wisataId))
                     }
                 )
             }
@@ -153,7 +157,14 @@ fun JetIcketApp(
                     navigateBack = {
                         navController.navigateUp()
                     },
+                    navigateToMakananPage = { navController.navigate("makanan") }
                 )
+            }
+
+            composable(
+                route = Screen.ListMakanan.route
+            ) {
+                // Komposisi halaman makanan
             }
         }
     }

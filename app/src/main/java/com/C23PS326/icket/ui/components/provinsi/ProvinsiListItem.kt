@@ -29,7 +29,8 @@ fun ProvinsiListItem(
 ) {
     Card(Modifier.padding(8.dp)) {
         Column(
-            modifier = modifier.clickable{navigateToDetail(id)},
+            modifier = modifier.clickable{navigateToDetail(id)}
+                .padding(8.dp),
         ) {
             Text(
                 text = name,

@@ -96,11 +96,6 @@ class Repository {
         return flowOf(team)
     }
 
-    fun getOrderById(budayaId: Long): OrderBudaya {
-        return budaya.first() {
-            it.budaya.budayaId == budayaId
-        }
-    }
     fun getInstance(): Repository =
         instance ?: synchronized(this) {
             Repository().apply {

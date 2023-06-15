@@ -40,6 +40,7 @@ fun HomeScreen(
         factory = ViewModelFactory(Repository())
     ),
     navigateToDetail: (Long) -> Unit,
+    navigateToDetailWisata: (Long) -> Unit,
 ) {
     Column(
     ) {
@@ -67,7 +68,7 @@ fun HomeScreen(
                     HomeContent2(
                         orderWisata = uIstate.data,
                         modifier = modifier,
-                        navigateToDetail = navigateToDetail
+                        navigateToDetailWisata = navigateToDetailWisata
                     )
                 }
                 is UiState.Error -> {}
@@ -131,7 +132,7 @@ fun HomeContent(
 fun HomeContent2(
     orderWisata: List<OrderWisata>,
     modifier: Modifier = Modifier,
-    navigateToDetail: (Long) -> Unit,
+    navigateToDetailWisata: (Long) -> Unit,
 ){
     Column(
         modifier =modifier
@@ -152,6 +153,7 @@ fun HomeContent2(
             val showBtn: Boolean by remember {
                 derivedStateOf { listState.firstVisibleItemIndex > 0 }
             }
+
             LazyRow(
                 state = listState,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -217,6 +219,13 @@ fun BudayaRow(
         }
     }
 }
+//@Preview(showBackground = true)
+//@Composable
+//fun BudayaRowPreview() {
+//    ICKETTheme {
+//        BudayaRow(rekomendata)
+//    }
+//}
 
 @Composable
 fun WisataRow(

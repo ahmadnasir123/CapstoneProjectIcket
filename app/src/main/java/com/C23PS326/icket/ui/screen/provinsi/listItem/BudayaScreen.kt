@@ -35,18 +35,14 @@ import com.C23PS326.icket.ui.screen.provinsi.listItem.BudayaViewModel
 @Composable
 fun BudayaScreen(
     budayaId: Long,
-    viewModel: BudayaViewModel = viewModel(
-        factory = ViewModelFactory(
-                Injection.provideRepository()
-        )
-    ),
+    viewModel: BudayaViewModel = viewModel(factory = ViewModelFactory(Injection.provideRepository())),
     navigateBack: () -> Unit,
-
-) {
+    ) {
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
                 viewModel.getBudaya2(budayaId)
+                viewModel.getBudayaId(budayaId)
             }
             is UiState.Success -> {
                 val data = uiState.data
