@@ -219,14 +219,6 @@ fun BudayaRow(
         }
     }
 }
-//@Preview(showBackground = true)
-//@Composable
-//fun BudayaRowPreview() {
-//    ICKETTheme {
-//        BudayaRow(rekomendata)
-//    }
-//}
-
 @Composable
 fun WisataRow(
     listMenu: List<Budaya>,

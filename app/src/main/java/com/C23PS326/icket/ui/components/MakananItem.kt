@@ -13,12 +13,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.C23PS326.icket.R
-import com.C23PS326.icket.model.Budaya
-import com.C23PS326.icket.model.makanan.Makanan
 
 @Composable
 fun MakananItem(

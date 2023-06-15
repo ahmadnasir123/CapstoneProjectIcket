@@ -11,7 +11,6 @@ import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -162,11 +161,6 @@ fun JetIcketApp(
             }
 
             composable(
-                route = Screen.ListWisata.route
-            ) {
-                // Komposisi halaman makanan
-            }
-            composable(
                 route = Screen.DetailMakanan.route,
                 arguments = listOf(navArgument("makananId") { type = NavType.LongType }),
             ) {
@@ -180,7 +174,6 @@ fun JetIcketApp(
             }
         }
     }
-//    navigation()
 }
 
 

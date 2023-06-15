@@ -1,18 +1,13 @@
 package com.C23PS326.icket.ui.screen.provinsi.makanan
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import com.C23PS326.icket.model.makanan.OrderMakanan
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -21,7 +16,7 @@ import com.C23PS326.icket.data.Repository
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.components.MakananItem
-import com.C23PS326.icket.ui.components.ProvinsiListItem
+
 
 @Composable
 fun Makanan(
