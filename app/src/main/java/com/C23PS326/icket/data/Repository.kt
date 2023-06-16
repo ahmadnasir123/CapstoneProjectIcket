@@ -74,12 +74,6 @@ class Repository {
         return flowOf(wisataCategori)
     }
 
-    fun getOrderRewardById(budayaId: Long): OrderBudaya {
-        return budaya.first {
-            it.budaya.budayaId == budayaId
-        }
-    }
-
 
     init {
         if (team.isEmpty()) {
@@ -87,18 +81,6 @@ class Repository {
                 team.add(OrderTeam(it,0))
             }
         }
-    }
-
-    fun getRekomendasi(): Flow<MutableList<OrderBudaya>> {
-        return flowOf(budaya)
-    }
-
-    fun getWisata(): Flow<MutableList<OrderWisata>> {
-        return flowOf(wisata)
-    }
-
-    fun getTeam(): Flow<MutableList<OrderTeam>> {
-        return flowOf(team)
     }
 
     fun getInstance(): Repository =
@@ -110,10 +92,6 @@ class Repository {
 
     fun getProvinsi(): Flow<MutableList<OrderProvinsi>> {
         return flowOf(provinsi)
-    }
-
-    fun getBudaya(): Flow<MutableList<OrderBudaya>> {
-        return flowOf(budaya)
     }
 
     fun getOrderByIdProvinsi(provinsiId: Long): OrderProvinsi {

@@ -56,11 +56,8 @@ fun ProvinsiContent(
             fontSize = 16.sp
         )
         Box(modifier = modifier) {
-            val scope = rememberCoroutineScope()
             val listState = rememberLazyListState()
-            val showBtn: Boolean by remember {
-                derivedStateOf { listState.firstVisibleItemIndex > 0 }
-            }
+
             LazyColumn(
                 state = listState,
                 contentPadding = PaddingValues(bottom = 80.dp)
@@ -74,22 +71,7 @@ fun ProvinsiContent(
                     )
                 }
             }
-//            AnimatedVisibility(
-//                visible = showBtn,
-//                enter = fadeIn() + slideInVertically(),
-//                exit = fadeOut() + slideOutVertically(),
-//                modifier = Modifier
-//                    .padding(bottom = 30.dp, end = 30.dp)
-//                    .align(Alignment.BottomEnd)
-//            ) {
-//                ScrollToTopButton(
-//                    onClick = {
-//                        scope.launch{
-//                            listState.scrollToItem(index = 0)
-//                        }
-//                    }
-//                )
-//            }
+
         }
     }
 }

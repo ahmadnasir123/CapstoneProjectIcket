@@ -1,7 +1,5 @@
 package com.C23PS326.icket.ui.screen.provinsi.listitemwisata
 
-import androidx.compose.runtime.State
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.C23PS326.icket.data.Repository

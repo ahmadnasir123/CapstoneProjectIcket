@@ -13,7 +13,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -21,16 +20,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.C23PS326.icket.R
 import com.C23PS326.icket.data.Repository
 import com.C23PS326.icket.model.makanan.Makanan
-import com.C23PS326.icket.model.provinsi.Provinsi
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
-import com.C23PS326.icket.ui.screen.provinsi.detail.DetailViewModel
 import com.C23PS326.icket.ui.theme.*
 
 @Composable
