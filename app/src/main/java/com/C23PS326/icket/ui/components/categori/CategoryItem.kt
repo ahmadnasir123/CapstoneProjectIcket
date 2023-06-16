@@ -30,28 +30,19 @@ fun CategoryItem(
     category: Category,
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {},
-//    navigateToWisataPage: () -> Unit
+
 ) {
     Column(
         modifier = modifier
             .clickable { onClick() }
-            .padding(horizontal = 8.dp),
+            .padding(horizontal = 4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Button(
-            onClick = {  },
-            modifier = Modifier
-                .weight(1f)
-                .padding(2.dp)
-                .clip(RoundedCornerShape(16.dp)),
-            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.yellowColor)
-        ) {
-            // Konten tombol
-        }
         Image(
             painter = painterResource(category.imageCategory),
             contentDescription = null,
-            modifier = Modifier.size(60.dp)
+            modifier = Modifier
+                .size(60.dp)
         )
         Text(
             text = stringResource(category.textCategory),
@@ -73,7 +64,6 @@ fun CategoryItemPreview(){
             ),
             modifier = Modifier.padding(horizontal = 8.dp),
             onClick = {},
-//            navigateToWisataPage = {}
         )
     }
 }
