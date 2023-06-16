@@ -1,13 +1,11 @@
 package com.C23PS326.icket.ui.screen
 
-import androidx.compose.animation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -18,10 +16,7 @@ import com.C23PS326.icket.model.provinsi.OrderProvinsi
 import com.C23PS326.icket.ui.ViewModelFactory
 import com.C23PS326.icket.ui.common.UiState
 import com.C23PS326.icket.ui.components.ProvinsiListItem
-import com.C23PS326.icket.ui.components.ScrollToTopButton
-import com.C23PS326.icket.ui.navigation.Screen
 import com.C23PS326.icket.ui.screen.provinsi.ProvinsiViewModel
-import kotlinx.coroutines.launch
 
 @Composable
 fun Provinsi(

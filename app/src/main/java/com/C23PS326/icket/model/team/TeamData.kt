@@ -8,7 +8,7 @@ object TeamData {
             "Ahmad Nasir",
             "nasirahmad240502@gmail.com",
             "Mobile Development",
-            "https://cdn-icons-png.flaticon.com/512/74/74472.png"
+            "https://cdn.discordapp.com/attachments/1118462358428340339/1118462459964035143/man.png"
         ),
         Team(
             2,
@@ -22,7 +22,7 @@ object TeamData {
             "Rasya Shafad Utsula",
             "rasyashafad253@gmail.com",
             "Cloud Computing",
-            "https://cdn-icons-png.flaticon.com/512/74/74472.png"
+            "https://cdn.discordapp.com/attachments/1118462358428340339/1118462459964035143/man.png"
         ),
         Team(
             4,
