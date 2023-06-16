@@ -31,7 +31,7 @@ fun BudayaListItem(
         modifier = modifier.width(140.dp)
             .clickable{navigateToDetail(id)},
         shape = RoundedCornerShape(8.dp),
-        ){
+    ){
         Column {
             AsyncImage(
                 model = image,

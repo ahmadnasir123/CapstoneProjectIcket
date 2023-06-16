@@ -41,6 +41,7 @@ fun HomeScreen(
         factory = ViewModelFactory(Repository())
     ),
     navigateToDetail: (Long) -> Unit,
+
 ) {
     Column(
     ) {
