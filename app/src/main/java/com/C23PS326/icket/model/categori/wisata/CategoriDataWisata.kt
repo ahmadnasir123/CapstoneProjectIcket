@@ -8,7 +8,7 @@ object CategoriDataWisata {
             "\n" +
                     "Pantai Kuta adalah salah satu pantai terkenal di Bali, Indonesia. Pantai ini terletak di sebelah selatan pulau dan merupakan bagian dari kawasan wisata Kuta yang sangat populer. Pantai Kuta dikenal dengan pasir putihnya yang lembut dan ombaknya yang cocok untuk berselancar. Selain itu, pantai ini juga menawarkan pemandangan matahari terbenam yang spektakuler. Sejarah Pantai Kuta mencakup transformasi dari sebuah desa nelayan kecil menjadi tujuan wisata internasional yang ramai. " +
                     "\n"+"Pada tahun 1970-an, Pantai Kuta mulai dikenal oleh para backpacker dan peselancar dari seluruh dunia. Sejak itu, pengembangan infrastruktur wisata di sekitar pantai terus berkembang dengan adanya hotel, restoran, toko-toko, dan tempat hiburan yang memadati kawasan ini. Meskipun telah mengalami beberapa perubahan, Pantai Kuta tetap menjadi daya tarik utama bagi wisatawan yang ingin menikmati keindahan pantai, kegiatan berselancar, dan kehidupan malam yang bersemangat.",
-            "https://blog-images.reddoorz.com/uploads/ckeditor/pictures/2829/content_pantai_kuta.jpg"
+        "https://www.kintamani.id/wp-content/uploads/Keindahan-Pantai-Kuta-Bali-yang-sanggup-menarik-ribuan-wisatawan-setiap-tahunnya-768x971.jpg"
         ),
         WisataCategori(
             2,
